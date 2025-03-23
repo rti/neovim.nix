@@ -1,0 +1,5 @@
+# Nixvim
+
+```
+nix run .
+```
