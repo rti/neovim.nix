@@ -72,6 +72,9 @@
               # "<Tab>" = [ "show" "accept" ];
             };
             completion = {
+              ghost_text = {
+                enabled = false;
+              };
               menu = {
                 auto_show = {
                   __raw = "function(ctx) return vim.fn.getcmdtype() == ':' end";
