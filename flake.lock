@@ -200,11 +200,11 @@
     },
     "theme": {
       "locked": {
-        "lastModified": 1742725544,
-        "narHash": "sha256-NOtkUfMqX2w1EShc1hUEUueduBwsRRMmyEzgQifILvU=",
+        "lastModified": 1742886066,
+        "narHash": "sha256-pxaT+BvXFsv9s8IglC0bq1s5SSv2hUWvGtYUo+8V4OI=",
         "owner": "rti",
         "repo": "theme.nix",
-        "rev": "35eae164fca270d6523754c00754d08e047b7324",
+        "rev": "bc9a01acda9be1a84789c8ba7d21a8f43f60a386",
         "type": "github"
       },
       "original": {
