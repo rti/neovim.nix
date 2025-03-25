@@ -201,7 +201,7 @@ let
       hi("NeoTreeGitModified", { fg = "${config.theme.foregroundYellow}" })
       hi("NeoTreeGitUnstaged", { fg = "${config.theme.foregroundYellow}" })
       hi("NeoTreeGitUntracked", { fg = "${config.theme.foreground2}" })
-      hi("NeoTreeIndentMarker", { fg = "${config.theme.foreground4}" })
+      hi("NeoTreeIndentMarker", { fg = "${config.theme.background3}" })
       hi("NeoTreeMessage", { fg = "${config.theme.foreground4}", attr = "italic" })
       hi("NeoTreeModified", { fg = "${config.theme.foregroundYellow}" })
       hi("NeoTreeRootName", { fg = "${config.theme.foreground}", attr = "bold,italic" })
