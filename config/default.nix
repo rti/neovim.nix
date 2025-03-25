@@ -35,7 +35,7 @@
       { mode = "n"; key = "<c-h>"; action = "<cmd>lua vim.lsp.buf.hover()<cr>"; }
 
       # Neotree
-      { mode = [ "n" "v" "t" ]; key = "<localleader>n"; action = "<cmd>Neotree filesystem toggle<cr>"; }
+      { mode = [ "n" "v" "t" ]; key = "<localleader>n"; action = "<cmd>Neotree reveal toggle<cr>"; }
       { mode = [ "n" "v" "t" ]; key = "<localleader>b"; action = "<cmd>Neotree buffers toggle<cr>"; }
 
       # fugitive
