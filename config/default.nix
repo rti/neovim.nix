@@ -196,13 +196,17 @@
         };
       };
 
-      neo-tree.enable = true;
-      neo-tree.window.width = 30;
-      neo-tree.defaultComponentConfigs.diagnostics.symbols = {
-        hint = "";
-        info = "";
-        warn = "";
-        error = "";
+      neo-tree = {
+        enable = true;
+        window.width = 30;
+        filesystem.groupEmptyDirs = true;
+        filesystem.scanMode = "deep";
+        defaultComponentConfigs.diagnostics.symbols = {
+          hint = "";
+          info = "";
+          warn = "";
+          error = "";
+        };
       };
 
       which-key.enable = true;
