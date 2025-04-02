@@ -128,6 +128,7 @@
       # snacks.settings.quickfile.enable = true;
       gitsigns.enable = true;
       fugitive.enable = true;
+      illuminate.enable = true;
 
       noice.enable = true;
       noice.settings = {

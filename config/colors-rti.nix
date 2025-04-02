@@ -247,6 +247,10 @@ let
       hi("TreesitterContextLineNumber", { fg = "${config.theme.foreground4}", bg = "${config.theme.background}" })
       hi("TreesitterContext", { bg = "${config.theme.background}" })
 
+      hi("IlluminatedWordText", { bg = "${config.theme.backgroundYellow}", attr = "underline" })
+      hi("IlluminatedWordRead", { bg = "${config.theme.backgroundGreen}", attr = "underline" })
+      hi("IlluminatedWordWrite", { bg = "${config.theme.backgroundRed}", attr = "underline" })
+
       vim.g.terminal_color_0 = "${config.theme.termBlack}"
       vim.g.terminal_color_1 = "${config.theme.termRed}"
       vim.g.terminal_color_2 = "${config.theme.termGreen}"
