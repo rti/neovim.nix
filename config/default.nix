@@ -255,6 +255,7 @@
         sources = {
           formatting = {
             black.enable = true; # python
+            prettier.enable = true; # lots of web related filetypes
           };
         };
       };
