@@ -48,6 +48,9 @@
       { mode = [ "n" "v" "t" ]; key = ",b"; action = "<plug>CamelCaseMotion_b"; }
       { mode = [ "n" "v" "t" ]; key = ",e"; action = "<plug>CamelCaseMotion_e"; }
       { mode = [ "n" "v" "t" ]; key = ",ge"; action = "<plug>CamelCaseMotion_ge"; }
+
+      # vim-slime
+      { mode = [ "n" ]; key = "<c-c><c-x>"; action = "<plug>SlimeSendCell"; }
     ];
 
     plugins = {
