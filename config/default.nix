@@ -138,6 +138,13 @@
       fugitive.enable = true;
       illuminate.enable = true;
 
+      vim-slime = {
+        enable = true;
+        settings = {
+          target = "kitty";
+        };
+      };
+
       noice.enable = true;
       noice.settings = {
         presets = {
