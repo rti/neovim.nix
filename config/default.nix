@@ -52,11 +52,6 @@
     };
 
     extraConfigLua = ''
-      for type, icon in pairs({ Hint = "", Info = "", Warn = "", Error = "", }) do
-        local hl = "DiagnosticSign" .. type
-        vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-      end
-
       vim.api.nvim_create_autocmd({ "VimResized", "CursorHoldI" }, {
         callback = function()
           vim.cmd("wincmd =")
@@ -72,6 +67,7 @@
       ''
         set rtp+=${colors-rti},${ftplugin-rti}
         colorscheme rti
+
         autocmd TextYankPost * silent! lua vim.highlight.on_yank {higroup=(vim.fn['hlexists']('HighlightedyankRegion') > 0 and 'HighlightedyankRegion' or 'IncSearch'), timeout=300}
       '';
   };
