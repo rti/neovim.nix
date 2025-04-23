@@ -89,10 +89,6 @@
           vim.cmd("wincmd =")
         end,
       })
-
-      local function disable_llama_debug()
-        vim.cmd([[let g:llama_config.show_info = v:false]])
-      end
     '';
 
     extraConfigVim =
