@@ -10,6 +10,7 @@
     ./vim-slime.nix
     ./noice.nix
     ./dashboard.nix
+    ./telescope.nix
   ];
 
   config = {
@@ -31,11 +32,6 @@
       { mode = "t"; key = "<m-j>"; action = "<c-\\><c-n><c-w>j"; }
       { mode = "t"; key = "<m-k>"; action = "<c-\\><c-n><c-w>k"; }
       { mode = "t"; key = "<esc>"; action = "<c-\\><c-n>"; }
-
-      # Telescope
-      { mode = [ "n" "v" "t" ]; key = "<localleader>ff"; action = "<cmd>Telescope find_files<cr>"; }
-      { mode = [ "n" "v" "t" ]; key = "<localleader>fg"; action = "<cmd>Telescope live_grep<cr>"; }
-      { mode = [ "n" "v" "t" ]; key = "<localleader>fb"; action = "<cmd>Telescope oldfiles<cr>"; }
 
       # LSP and LSP Format
       { mode = "n"; key = "<localleader>lf"; action = "<cmd>lua vim.lsp.buf.format({async=true})<cr>"; }
@@ -86,18 +82,6 @@
 
       which-key.enable = true;
       git-conflict.enable = true;
-      telescope.enable = true;
-      telescope.settings = {
-        defaults = {
-          layout_config = {
-            prompt_position = "top";
-            preview_width = 0.55;
-          };
-          prompt_prefix = "   ";
-          selection_caret = " ";
-          sorting_strategy = "ascending";
-        };
-      };
 
       nvim-surround.enable = true;
 
