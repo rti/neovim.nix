@@ -16,6 +16,7 @@
     ./llama.nix
     ./autohide-cursorline.nix
     ./camelcasemotion.nix
+    ./git.nix
   ];
 
   config = {
@@ -37,9 +38,6 @@
       { mode = "t"; key = "<m-j>"; action = "<c-\\><c-n><c-w>j"; }
       { mode = "t"; key = "<m-k>"; action = "<c-\\><c-n><c-w>k"; }
       { mode = "t"; key = "<esc>"; action = "<c-\\><c-n>"; }
-
-      # fugitive
-      { mode = [ "n" "v" "t" ]; key = "<localleader>gs"; action = "<cmd>vertical botright Git<cr>"; }
     ];
 
     plugins = {
@@ -48,11 +46,8 @@
       nvim-autopairs.enable = true;
       snacks.enable = true;
       snacks.settings.notifier.enable = true;
-      gitsigns.enable = true;
-      fugitive.enable = true;
       illuminate.enable = true;
       which-key.enable = true;
-      git-conflict.enable = true;
       nvim-surround.enable = true;
     };
 
