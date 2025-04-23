@@ -287,8 +287,7 @@
 
       (pkgs.vimUtils.buildVimPlugin {
         pname = "llama.vim";
-        version = "rti-dev";
-        # src = inputs.minuet-ai;
+        version = "dev";
         src = pkgs.fetchurl {
           url = "https://github.com/ggml-org/llama.vim/archive/163c87d169f4aaecc740c83902fe71bcffd9eda5.tar.gz";
           sha256 = "sha256-jaPcAg5LoOerKbuWNvQomi5VREHbL1BksWHg2max7bs=";
