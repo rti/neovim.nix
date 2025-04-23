@@ -7,18 +7,18 @@
     ./keymaps.nix
     ./plugins.nix
     ./treesitter.nix
-    ./lualine.nix
+    ./lsp.nix
     ./blink.nix
-    ./vim-slime.nix
-    ./noice.nix
-    ./dashboard.nix
+    ./lualine.nix
     ./telescope.nix
     ./neo-tree.nix
-    ./lsp.nix
+    ./dashboard.nix
+    ./noice.nix
     ./llama.nix
-    ./autohide-cursorline.nix
     ./camelcasemotion.nix
     ./git.nix
+    ./vim-slime.nix
+    ./autohide-cursorline.nix
     ./highlight-yank.nix
   ];
 
