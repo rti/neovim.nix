@@ -64,8 +64,6 @@
       camelcasemotion
     ];
 
-    extraPackages = with pkgs; [ ripgrep curl ];
-
     extraConfigLua = ''
       for type, icon in pairs({ Hint = "", Info = "", Warn = "", Error = "", }) do
         local hl = "DiagnosticSign" .. type

@@ -18,4 +18,6 @@
     end
     vim.defer_fn(disable_llama_debug, 1000)
   '';
+
+  extraPackages = with pkgs; [ curl ];
 }

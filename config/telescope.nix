@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs,... }:
 
 {
   keymaps = [
@@ -22,4 +22,6 @@
       };
     };
   };
+
+  extraPackages = with pkgs; [ ripgrep ];
 }
