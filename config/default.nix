@@ -63,8 +63,6 @@
     ];
 
     plugins = {
-      # blink-ripgrep.enable = true;
-
       auto-save.enable = true;
       web-devicons.enable = true;
       nvim-autopairs.enable = true;
