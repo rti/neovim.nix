@@ -11,6 +11,7 @@
     ./noice.nix
     ./dashboard.nix
     ./telescope.nix
+    ./neo-tree.nix
   ];
 
   config = {
@@ -40,10 +41,6 @@
       { mode = "n"; key = "<localleader>ln"; action = "<cmd>lua vim.lsp.buf.rename()<cr>"; }
       { mode = "n"; key = "<localleader>la"; action = "<cmd>lua vim.lsp.buf.code_action()<cr>"; }
 
-      # Neotree
-      { mode = [ "n" "v" "t" ]; key = "<localleader>n"; action = "<cmd>Neotree reveal toggle<cr>"; }
-      { mode = [ "n" "v" "t" ]; key = "<localleader>b"; action = "<cmd>Neotree buffers toggle<cr>"; }
-
       # fugitive
       { mode = [ "n" "v" "t" ]; key = "<localleader>gs"; action = "<cmd>vertical botright Git<cr>"; }
 
@@ -66,19 +63,6 @@
       gitsigns.enable = true;
       fugitive.enable = true;
       illuminate.enable = true;
-
-      neo-tree = {
-        enable = true;
-        window.width = 30;
-        filesystem.groupEmptyDirs = true;
-        filesystem.scanMode = "deep";
-        defaultComponentConfigs.diagnostics.symbols = {
-          hint = "";
-          info = "";
-          warn = "";
-          error = "";
-        };
-      };
 
       which-key.enable = true;
       git-conflict.enable = true;
