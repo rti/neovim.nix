@@ -15,6 +15,7 @@
     ./lsp.nix
     ./llama.nix
     ./autohide-cursorline.nix
+    ./camelcasemotion.nix
   ];
 
   config = {
@@ -39,12 +40,6 @@
 
       # fugitive
       { mode = [ "n" "v" "t" ]; key = "<localleader>gs"; action = "<cmd>vertical botright Git<cr>"; }
-
-      # CamelCaseMotion
-      { mode = [ "n" "v" "t" ]; key = ",w"; action = "<plug>CamelCaseMotion_w"; }
-      { mode = [ "n" "v" "t" ]; key = ",b"; action = "<plug>CamelCaseMotion_b"; }
-      { mode = [ "n" "v" "t" ]; key = ",e"; action = "<plug>CamelCaseMotion_e"; }
-      { mode = [ "n" "v" "t" ]; key = ",ge"; action = "<plug>CamelCaseMotion_ge"; }
     ];
 
     plugins = {
@@ -60,10 +55,6 @@
       git-conflict.enable = true;
       nvim-surround.enable = true;
     };
-
-    extraPlugins = with pkgs.vimPlugins; [
-      camelcasemotion
-    ];
 
     extraConfigLua = ''
       for type, icon in pairs({ Hint = "", Info = "", Warn = "", Error = "", }) do
