@@ -2,7 +2,10 @@
 , config
 , ...
 }: {
-  imports = [ ./opts.nix ];
+  imports = [
+    ./opts.nix
+    ./treesitter.nix
+  ];
 
   config = {
     keymaps = [
@@ -58,13 +61,6 @@
     ];
 
     plugins = {
-      treesitter = {
-        enable = true;
-        settings.highlight.enable = true;
-        settings.indent.enable = true;
-      };
-
-      ts-context-commentstring.enable = true;
 
       lualine = {
         enable = true;
