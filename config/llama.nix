@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  extraPlugins = with pkgs.vimPlugins; [
+  extraPlugins = [
     (pkgs.vimUtils.buildVimPlugin {
       pname = "llama.vim";
       version = "dev";
