@@ -2,10 +2,10 @@
 
 pkgs.stdenvNoCC.mkDerivation {
   name = "ftplugin-rti";
-  src = ./ftplugin;
+  src = ./.;
   installPhase = ''
-    mkdir $out
-    cp -R $src $out/ftplugin
+    mkdir -p $out/ftplugin
+    cp -v $src/*.vim $out/ftplugin/
   '';
 }
 

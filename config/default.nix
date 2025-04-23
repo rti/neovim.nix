@@ -7,6 +7,7 @@
     ./keymaps.nix
     ./plugins.nix
     ./colorscheme.nix
+    ./ftplugin.nix
     ./treesitter.nix
     ./lsp.nix
     ./blink.nix
@@ -32,13 +33,5 @@
       })
     '';
 
-    # Load custom filetype plugin settings
-    extraConfigVim =
-      let
-        ftplugin-rti = import ./ftplugin-rti.nix { inherit config pkgs; };
-      in
-      ''
-        set rtp+=${ftplugin-rti}
-      '';
   };
 }
