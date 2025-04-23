@@ -14,6 +14,7 @@
     ./neo-tree.nix
     ./lsp.nix
     ./llama.nix
+    ./autohide-cursorline.nix
   ];
 
   config = {
@@ -69,18 +70,6 @@
         local hl = "DiagnosticSign" .. type
         vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
       end
-
-      local function setup_autohide_cursorline()
-        vim.api.nvim_exec([[
-        augroup noclc_active_window_buffer_cursorline
-        autocmd!
-        autocmd WinEnter,BufEnter * if &filetype != 'dashboard' && &filetype != 'DiffviewFiles' | setlocal cursorline | endif
-        autocmd WinLeave,BufLeave * if &filetype != 'dashboard' && &filetype != 'DiffviewFiles' | setlocal nocursorline | endif
-        augroup END
-        ]], false)
-      end
-
-      setup_autohide_cursorline()
 
       vim.api.nvim_create_autocmd({ "VimResized", "CursorHoldI" }, {
         callback = function()
