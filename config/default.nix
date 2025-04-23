@@ -12,6 +12,7 @@
     ./dashboard.nix
     ./telescope.nix
     ./neo-tree.nix
+    ./lsp.nix
   ];
 
   config = {
@@ -33,13 +34,6 @@
       { mode = "t"; key = "<m-j>"; action = "<c-\\><c-n><c-w>j"; }
       { mode = "t"; key = "<m-k>"; action = "<c-\\><c-n><c-w>k"; }
       { mode = "t"; key = "<esc>"; action = "<c-\\><c-n>"; }
-
-      # LSP and LSP Format
-      { mode = "n"; key = "<localleader>lf"; action = "<cmd>lua vim.lsp.buf.format({async=true})<cr>"; }
-      { mode = "v"; key = "<localleader>lf"; action = "<cmd>lua vim.lsp.buf.range_formatting()<cr>"; }
-      { mode = "n"; key = "<c-h>"; action = "<cmd>lua vim.lsp.buf.hover()<cr>"; }
-      { mode = "n"; key = "<localleader>ln"; action = "<cmd>lua vim.lsp.buf.rename()<cr>"; }
-      { mode = "n"; key = "<localleader>la"; action = "<cmd>lua vim.lsp.buf.code_action()<cr>"; }
 
       # fugitive
       { mode = [ "n" "v" "t" ]; key = "<localleader>gs"; action = "<cmd>vertical botright Git<cr>"; }
@@ -63,38 +57,6 @@
       which-key.enable = true;
       git-conflict.enable = true;
       nvim-surround.enable = true;
-
-      lsp = {
-        enable = true;
-        servers = {
-          nixd = {
-            enable = true;
-            settings.formatting.command = [ "nixpkgs-fmt" ];
-            # settings.nixpkgs = nixpkgs;
-          };
-
-          bashls.enable = true;
-          dockerls.enable = true;
-          jsonls.enable = true;
-          html.enable = true;
-          cssls.enable = true;
-          tailwindcss.enable = true;
-          phpactor.enable = true;
-          pyright.enable = true;
-          vimls.enable = true;
-          yamlls.enable = true;
-        };
-      };
-
-      none-ls = {
-        enable = true;
-        sources = {
-          formatting = {
-            black.enable = true; # python
-            prettier.enable = true; # lots of web related filetypes
-          };
-        };
-      };
     };
 
     extraPlugins = with pkgs.vimPlugins; [
