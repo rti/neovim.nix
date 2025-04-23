@@ -57,16 +57,11 @@
       nvim-autopairs.enable = true;
       snacks.enable = true;
       snacks.settings.notifier.enable = true;
-      # snacks.settings.statuscolumn.enable = true;
-      # snacks.settings.bigfile.enable = true;
-      # snacks.settings.quickfile.enable = true;
       gitsigns.enable = true;
       fugitive.enable = true;
       illuminate.enable = true;
-
       which-key.enable = true;
       git-conflict.enable = true;
-
       nvim-surround.enable = true;
 
       lsp = {
@@ -116,6 +111,7 @@
     ];
 
     extraPackages = with pkgs; [ ripgrep curl ];
+
     extraConfigLua = ''
       for type, icon in pairs({ Hint = "", Info = "", Warn = "", Error = "", }) do
         local hl = "DiagnosticSign" .. type
