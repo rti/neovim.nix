@@ -7,6 +7,7 @@
     ./treesitter.nix
     ./lualine.nix
     ./blink.nix
+    ./vim-slime.nix
   ];
 
   config = {
@@ -53,13 +54,6 @@
       { mode = [ "n" "v" "t" ]; key = ",b"; action = "<plug>CamelCaseMotion_b"; }
       { mode = [ "n" "v" "t" ]; key = ",e"; action = "<plug>CamelCaseMotion_e"; }
       { mode = [ "n" "v" "t" ]; key = ",ge"; action = "<plug>CamelCaseMotion_ge"; }
-
-      # vim-slime
-      { mode = [ "n" ]; key = "<localleader>sp"; action = "<plug>SlimeParagraphSend"; }
-      { mode = [ "v" ]; key = "<localleader>ss"; action = "<plug>SlimeRegionSend"; }
-      { mode = [ "n" ]; key = "<localleader>ss"; action = "<plug>SlimeMotionSend"; }
-      { mode = [ "n" ]; key = "<localleader>sc"; action = "<plug>SlimeSendCell"; }
-      { mode = [ "n" ]; key = "<localleader>sl"; action = "<plug>SlimeLineSend"; }
     ];
 
     plugins = {
@@ -74,14 +68,6 @@
       gitsigns.enable = true;
       fugitive.enable = true;
       illuminate.enable = true;
-
-      vim-slime = {
-        enable = true;
-        settings = {
-          target = "kitty";
-          no_mappings = 1;
-        };
-      };
 
       noice.enable = true;
       noice.settings = {
