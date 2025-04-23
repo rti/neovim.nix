@@ -50,7 +50,11 @@
       { mode = [ "n" "v" "t" ]; key = ",ge"; action = "<plug>CamelCaseMotion_ge"; }
 
       # vim-slime
-      { mode = [ "n" ]; key = "<c-c><c-x>"; action = "<plug>SlimeSendCell"; }
+      { mode = [ "n" ]; key = "<localleader>sp"; action = "<plug>SlimeParagraphSend"; }
+      { mode = [ "v" ]; key = "<localleader>ss"; action = "<plug>SlimeRegionSend"; }
+      { mode = [ "n" ]; key = "<localleader>ss"; action = "<plug>SlimeMotionSend"; }
+      { mode = [ "n" ]; key = "<localleader>sc"; action = "<plug>SlimeSendCell"; }
+      { mode = [ "n" ]; key = "<localleader>sl"; action = "<plug>SlimeLineSend"; }
     ];
 
     plugins = {
@@ -145,6 +149,7 @@
         enable = true;
         settings = {
           target = "kitty";
+          no_mappings = 1;
         };
       };
 
