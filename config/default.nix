@@ -1,7 +1,6 @@
-{ pkgs
-, config
-, ...
-}: {
+{ ... }:
+
+{
   imports = [
     ./opts.nix
     ./keymaps.nix
@@ -21,17 +20,7 @@
     ./git.nix
     ./vim-slime.nix
     ./autohide-cursorline.nix
+    ./auto-resize-windows.nix
     ./highlight-yank.nix
   ];
-
-  config = {
-    extraConfigLua = ''
-      vim.api.nvim_create_autocmd({ "VimResized", "CursorHoldI" }, {
-        callback = function()
-          vim.cmd("wincmd =")
-        end,
-      })
-    '';
-
-  };
 }
