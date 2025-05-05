@@ -249,7 +249,7 @@ let
 
       hi("IlluminatedWordText", { bg = "${config.theme.backgroundYellow}", attr = "underline" })
       hi("IlluminatedWordRead", { bg = "${config.theme.backgroundGreen}", attr = "underline" })
-      hi("IlluminatedWordWrite", { bg = "${config.theme.backgroundRed}", attr = "underline" })
+      hi("IlluminatedWordWrite", { bg = "${config.theme.backgroundYellow}", attr = "underline" })
 
       vim.g.terminal_color_0 = "${config.theme.termBlack}"
       vim.g.terminal_color_1 = "${config.theme.termRed}"
