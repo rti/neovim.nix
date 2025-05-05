@@ -9,5 +9,6 @@
     };
 
     ts-context-commentstring.enable = true;
+    ts-autotag.enable = true;
   };
 }
