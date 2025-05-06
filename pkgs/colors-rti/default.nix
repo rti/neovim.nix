@@ -123,9 +123,9 @@ let
       hi("lualineDiagnosticWarn", { fg = "${config.theme.foregroundYellow}", bg = "${config.theme.background4}" })
 
       hi("DiffAdd", { bg = "${config.theme.backgroundGreen}" })
-      hi("DiffChange", { bg = "${config.theme.backgroundBlue}" })
+      hi("DiffChange", { bg = "${config.theme.backgroundYellow}" })
       hi("DiffDelete", { bg = "${config.theme.backgroundRed}" })
-      hi("DiffText", { fg = "${config.theme.foreground}", bg = "${config.theme.background3}" })
+      hi("DiffText", { fg = "${config.theme.foreground}", bg = "${config.theme.brightYellow}" })
       hi("diffAdded", "DiffAdd");
       hi("diffChanged", "DiffChange");
       hi("diffRemoved", "DiffDelete");
@@ -136,6 +136,17 @@ let
 
       hi("@text.diff.add.diff", "DiffAdd")
       hi("@text.diff.delete.diff", "DiffDelete")
+
+      hi("GitSignsAdd", { fg = "${config.theme.brightGreen}" })
+      hi("GitSignsAddInline", { fg = "${config.theme.foreground}", bg = "${config.theme.brightGreen}" })
+      hi("GitSignsChange", { fg = "${config.theme.brightYellow}" })
+      hi("GitSignsChangeInline", { fg = "${config.theme.foreground}", bg = "${config.theme.brightYellow}" })
+      hi("GitSignsDelete", { fg = "${config.theme.brightRed}" })
+      hi("GitSignsDeleteInline", { fg = "${config.theme.foreground}", bg = "${config.theme.brightRed}" })
+      hi("GitSignsStagedAdd", { fg = "${config.theme.backgroundGreen}" })
+      hi("GitSignsStagedChange", { fg = "${config.theme.backgroundYellow}" })
+      hi("GitSignsStagedDelete", { fg = "${config.theme.backgroundRed}" })
+      hi("GitSignsCurrentLineBlame", { fg = "${config.theme.background}" })
 
       hi("DapUIType", "Normal")
       hi("DapUIScope", "Normal")
@@ -159,13 +170,6 @@ let
 
       hi("FoldColumn", { fg = "${config.theme.background3}" })
       hi("Folded", { fg = "${config.theme.foreground3}", bg = "${config.theme.background2}" })
-
-      hi("GitSignsAdd", { fg = "${config.theme.brightGreen}" })
-      hi("GitSignsChange", { fg = "${config.theme.brightYellow}" })
-      hi("GitSignsDelete", { fg = "${config.theme.brightRed}" })
-      hi("GitSignsStagedAdd", { fg = "${config.theme.brightGreen}" })
-      hi("GitSignsStagedChange", { fg = "${config.theme.brightYellow}" })
-      hi("GitSignsStagedDelete", { fg = "${config.theme.brightRed}" })
 
       hi("MatchParen", { fg = "${config.theme.foreground}", bg = "${config.theme.backgroundMagenta}" })
 
