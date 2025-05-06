@@ -288,32 +288,32 @@ let
   lualineTheme = pkgs.writeTextDir "lua/lualine/themes/rti.lua" ''
     return {
       normal = {
-        a = { bg = "${config.theme.primary}", fg = "${config.theme.background}", gui = 'none' },
+        a = { bg = "${config.theme.primary}", fg = "${config.theme.background}", gui = 'none', attr = "bold" },
         b = { bg = "${config.theme.background4}", fg = "${config.theme.foreground}", gui = 'none' },
         c = { bg = "${config.theme.background4}", fg = "${config.theme.foreground}", gui = 'none' },
       },
       insert = {
-        a = { bg = "${config.theme.foregroundMagenta}", fg = "${config.theme.background}", gui = 'none' },
+        a = { bg = "${config.theme.foregroundMagenta}", fg = "${config.theme.background}", gui = 'none', attr = "bold" },
         b = { bg = "${config.theme.background4}", fg = "${config.theme.foreground}", gui = 'none' },
         c = { bg = "${config.theme.background4}", fg = "${config.theme.foreground}", gui = 'none' },
       },
       replace = {
-        a = { bg = "${config.theme.foregroundRed}", fg = "${config.theme.background}", gui = 'none' },
+        a = { bg = "${config.theme.foregroundRed}", fg = "${config.theme.background}", gui = 'none', attr = "bold" },
         b = { bg = "${config.theme.background4}", fg = "${config.theme.foreground}", gui = 'none' },
         c = { bg = "${config.theme.background4}", fg = "${config.theme.foreground}", gui = 'none' },
       },
       visual = {
-        a = { bg = "${config.theme.backgroundBlue}", fg = "${config.theme.foreground}", gui = 'none' },
+        a = { bg = "${config.theme.backgroundBlue}", fg = "${config.theme.foreground}", gui = 'none', attr = "bold" },
         b = { bg = "${config.theme.background4}", fg = "${config.theme.foreground}", gui = 'none' },
         c = { bg = "${config.theme.background4}", fg = "${config.theme.foreground}", gui = 'none' },
       },
       command = {
-        a = { bg = "${config.theme.foregroundYellow}", fg = "${config.theme.background}", gui = 'none' },
+        a = { bg = "${config.theme.foregroundYellow}", fg = "${config.theme.background}", gui = 'none', attr = "bold" },
         b = { bg = "${config.theme.background4}", fg = "${config.theme.foreground}", gui = 'none' },
         c = { bg = "${config.theme.background4}", fg = "${config.theme.foreground}", gui = 'none' },
       },
       terminal = {
-        a = { bg = "${config.theme.foregroundCyan}", fg = "${config.theme.background}", gui = 'none' },
+        a = { bg = "${config.theme.foregroundCyan}", fg = "${config.theme.background}", gui = 'none', attr = "bold" },
         b = { bg = "${config.theme.background4}", fg = "${config.theme.foreground}", gui = 'none' },
         c = { bg = "${config.theme.background4}", fg = "${config.theme.foreground}", gui = 'none' },
       },
