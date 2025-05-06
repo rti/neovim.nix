@@ -32,7 +32,10 @@
     };
 
     # https://github.com/lewis6991/gitsigns.nvim
-    gitsigns.enable = true;
+    gitsigns = {
+      enable = true;
+      settings.current_line_blame = true;
+    };
 
     # https://github.com/akinsho/git-conflict.nvim
     diffview = {
