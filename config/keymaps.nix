@@ -19,5 +19,10 @@
     { mode = "t"; key = "<m-j>"; action = "<c-\\><c-n><c-w>j"; }
     { mode = "t"; key = "<m-k>"; action = "<c-\\><c-n><c-w>k"; }
     { mode = "t"; key = "<esc>"; action = "<c-\\><c-n>"; }
+
+    # Tab stuff
+    { mode = [ "n" ]; key = "]t"; action = "<cmd>tabnext<cr>"; }
+    { mode = [ "n" ]; key = "[t"; action = "<cmd>tabprevious<cr>"; }
+    { mode = [ "n" ]; key = "<localleader>dt"; action = "<cmd>tabclose<cr>"; }
   ];
 }

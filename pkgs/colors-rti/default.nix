@@ -37,14 +37,14 @@ let
       hi("Italic", { attr = "italic" })
       hi("Underlined", { attr = "underline" })
 
-      hi("StatusLine", { bg="${config.theme.background}" })
-      hi("StatusLineNC", { bg="${config.theme.background}" })
+      hi("StatusLine", { bg="${config.theme.background3}" })
+      hi("StatusLineNC", { bg="${config.theme.background3}" })
 
       hi("BufferCurrent", { attr = "bold" })
 
-      hi("TabLine", "StatusLine")
-      hi("TabLineFill", "StatusLineNC")
-      hi("TabLineSel", { attr = "bold" })
+      hi("TabLine", { bg="${config.theme.background4}" })
+      hi("TabLineSel", { bg = "${config.theme.foregroundCyan}", fg = "${config.theme.background}", attr = "bold" })
+      hi("TabLineFill", "Normal")
 
       hi("Boolean", { fg = "${config.theme.foreground}" })
       hi("Comment", { fg = "${config.theme.foreground4}", attr = "italic" })
