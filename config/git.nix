@@ -18,6 +18,7 @@
 
     # diffview
     { mode = [ "n" "v" "t" ]; key = "<localleader>gd"; action = ":DiffviewOpen "; }
+    { mode = [ "n" "v" "t" ]; key = "<localleader>gS"; action = "<cmd>DiffviewOpen HEAD<cr>"; }
     { mode = [ "n" "v" "t" ]; key = "<localleader>gl"; action = "<cmd>DiffviewFileHistory<cr>"; }
   ];
 
