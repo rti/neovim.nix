@@ -18,9 +18,6 @@
           # "<Tab>" = [ "show" "accept" ];
         };
         completion = {
-          ghost_text = {
-            enabled = false;
-          };
           list.selection = {
             preselect = false;
             auto_insert = true;
@@ -30,14 +27,23 @@
               __raw = "function(ctx) return vim.fn.getcmdtype() == ':' end";
             };
           };
+          ghost_text = { enabled = false; };
         };
       };
       completion = {
-        menu.auto_show = true;
-        menu.border = "rounded";
-        documentation.window.border = "rounded";
-        documentation.auto_show = true;
-        documentation.auto_show_delay_ms = 0;
+        list.selection = {
+          preselect = false;
+          auto_insert = true;
+        };
+        menu = {
+          auto_show = true;
+          border = "rounded";
+        };
+        documentation = {
+          window.border = "rounded";
+          auto_show = true;
+          auto_show_delay_ms = 0;
+        };
       };
       keymap = {
         "<C-b>" = [ "scroll_documentation_up" "fallback" ];
