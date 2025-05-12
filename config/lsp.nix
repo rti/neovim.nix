@@ -27,7 +27,7 @@
         cssls.enable = true;
         tailwindcss.enable = true;
         phpactor.enable = true;
-        pyright.enable = true;
+        pylsp.enable = true;
         vimls.enable = true;
         yamlls.enable = true;
       };
