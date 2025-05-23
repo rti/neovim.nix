@@ -14,6 +14,8 @@
     lsp = {
       enable = true;
       servers = {
+        vimls.enable = true;
+
         nixd = {
           enable = true;
           settings.formatting.command = [ "nixpkgs-fmt" ];
@@ -21,14 +23,18 @@
         };
 
         bashls.enable = true;
+
         dockerls.enable = true;
-        jsonls.enable = true;
+
         html.enable = true;
         cssls.enable = true;
         tailwindcss.enable = true;
+
         phpactor.enable = true;
         pylsp.enable = true;
-        vimls.enable = true;
+
+
+        jsonls.enable = true;
         yamlls.enable = true;
       };
     };
