@@ -14,23 +14,11 @@
     lsp = {
       enable = true;
       servers = {
-        vimls.enable = true;
-
         nixd = {
           enable = true;
           settings.formatting.command = [ "nixpkgs-fmt" ];
           # settings.nixpkgs = nixpkgs;
         };
-
-        bashls.enable = true;
-
-        dockerls.enable = true;
-
-        html.enable = true;
-        cssls.enable = true;
-        tailwindcss.enable = true;
-
-        phpactor.enable = true;
 
         pylsp = {
           enable = true;
@@ -43,7 +31,14 @@
           settings.plugins.ruff.enabled = true; # linter and code formatter
         };
 
+        bashls.enable = true;
+        cssls.enable = true;
+        dockerls.enable = true;
+        html.enable = true;
         jsonls.enable = true;
+        phpactor.enable = true;
+        tailwindcss.enable = true;
+        vimls.enable = true;
         yamlls.enable = true;
       };
     };
