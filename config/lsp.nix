@@ -31,8 +31,17 @@
         tailwindcss.enable = true;
 
         phpactor.enable = true;
-        pylsp.enable = true;
 
+        pylsp = {
+          enable = true;
+          settings.plugins.jedi_completion.enabled = true;
+          settings.plugins.jedi_definition.enabled = true;
+          settings.plugins.jedi_hover.enabled = true;
+          settings.plugins.jedi_references.enabled = true;
+          settings.plugins.jedi_signature_help.enabled = true;
+          settings.plugins.jedi_symbols.enabled = true;
+          settings.plugins.ruff.enabled = true; # linter and code formatter
+        };
 
         jsonls.enable = true;
         yamlls.enable = true;
@@ -43,7 +52,6 @@
       enable = true;
       sources = {
         formatting = {
-          black.enable = true; # python
           prettier.enable = true; # lots of web related filetypes
         };
       };
