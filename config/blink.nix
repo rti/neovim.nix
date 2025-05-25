@@ -4,6 +4,8 @@
   plugins.blink-cmp = {
     enable = true;
     settings = {
+      signature = { enabled = false; }; # handled by noice by default
+
       completion = {
         list.selection = {
           preselect = false;
