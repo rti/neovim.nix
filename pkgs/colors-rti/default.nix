@@ -105,6 +105,10 @@ let
       hi("DiagnosticVirtualTextHint", "DiagnosticHint")
       hi("DiagnosticVirtualTextInfo", "DiagnosticInfo")
       hi("DiagnosticVirtualTextWarn", "DiagnosticWarn")
+      hi("TinyInlineDiagnosticVirtualTextError", { fg = "${config.theme.foregroundRed}", bg = "${config.theme.backgroundRed}" })
+      hi("TinyInlineDiagnosticVirtualTextHint", { fg = "${config.theme.foregroundCyan}", bg = "${config.theme.backgroundCyan}" })
+      hi("TinyInlineDiagnosticVirtualTextInfo", { fg = "${config.theme.foregroundBlue}", bg = "${config.theme.backgroundBlue}" })
+      hi("TinyInlineDiagnosticVirtualTextWarn", { fg = "${config.theme.foregroundYellow}", bg = "${config.theme.backgroundYellow}" })
 
       hi("Error", "DiagnosticError")
       hi("ErrorMsg", "DiagnosticError")

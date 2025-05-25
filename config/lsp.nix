@@ -11,6 +11,15 @@
   ];
 
   plugins = {
+    tiny-inline-diagnostic = {
+      enable = true;
+      settings = {
+        preset = "classic";
+        multilines = true;
+        virt_texts = { priority = 2048; };
+      };
+    };
+
     lsp = {
       enable = true;
       servers = {
