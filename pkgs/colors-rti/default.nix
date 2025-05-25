@@ -150,7 +150,7 @@ let
       hi("GitSignsStagedAdd", { fg = "${config.theme.backgroundGreen}" })
       hi("GitSignsStagedChange", { fg = "${config.theme.backgroundYellow}" })
       hi("GitSignsStagedDelete", { fg = "${config.theme.backgroundRed}" })
-      hi("GitSignsCurrentLineBlame", "Comment")
+      hi("GitSignsCurrentLineBlame", { fg = "${config.theme.foreground4}", attr = "bold" })
 
       hi("DapUIType", "Normal")
       hi("DapUIScope", "Normal")
