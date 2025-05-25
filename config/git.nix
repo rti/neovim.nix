@@ -3,7 +3,7 @@
 {
   keymaps = [
     # fugitive
-    { mode = [ "n" "v" "t" ]; key = "<localleader>gs"; action = "<cmd>vertical botright Git<cr>"; }
+    { mode = [ "n" "v" ]; key = "<localleader>gs"; action = "<cmd>vertical botright Git<cr>"; }
 
     # git-conflict
     { mode = [ "n" ]; key = "]x"; action = "<Plug>(git-conflict-next-conflict)"; }
@@ -17,9 +17,9 @@
     { mode = [ "n" ]; key = "<localleader>gu"; action = "<cmd>Gitsigns undo_stage_hunk<cr>"; }
 
     # diffview
-    { mode = [ "n" "v" "t" ]; key = "<localleader>gd"; action = ":DiffviewOpen "; }
-    { mode = [ "n" "v" "t" ]; key = "<localleader>gS"; action = "<cmd>DiffviewOpen HEAD<cr>"; }
-    { mode = [ "n" "v" "t" ]; key = "<localleader>gl"; action = "<cmd>DiffviewFileHistory<cr>"; }
+    { mode = [ "n" "v" ]; key = "<localleader>gd"; action = ":DiffviewOpen "; }
+    { mode = [ "n" "v" ]; key = "<localleader>gS"; action = "<cmd>DiffviewOpen HEAD<cr>"; }
+    { mode = [ "n" "v" ]; key = "<localleader>gl"; action = "<cmd>DiffviewFileHistory<cr>"; }
   ];
 
   plugins = {
