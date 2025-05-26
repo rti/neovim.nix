@@ -1,10 +1,22 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
+  plugins.blink-ripgrep.enable = true;
+  extraPackages = with pkgs; [ ripgrep ];
+
   plugins.blink-cmp = {
     enable = true;
     settings = {
       signature = { enabled = false; }; # handled by noice by default
+
+      sources = {
+        providers.ripgrep = {
+          module = "blink-ripgrep";
+          name = "ripgrep";
+        };
+
+        default = [ "lsp" "ripgrep" "snippets" "path" ];
+      };
 
       completion = {
         list.selection = {
