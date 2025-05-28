@@ -1,8 +1,7 @@
-{ pkgs,... }:
+{ pkgs, lib, ... }:
 
 {
   keymaps = [
-    # Telescope
     { mode = [ "n" "v" ]; key = "<localleader>ff"; action = "<cmd>Telescope find_files<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>fg"; action = "<cmd>Telescope live_grep<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>fb"; action = "<cmd>Telescope oldfiles<cr>"; }
@@ -19,6 +18,23 @@
         prompt_prefix = "   ";
         selection_caret = " ";
         sorting_strategy = "ascending";
+        vimgrep_arguments =
+          let
+            customRipgrepArgs = [
+              "--hidden"
+              "--glob"
+              "!**/.git/*"
+            ];
+          in
+          [
+            (lib.getExe pkgs.ripgrep)
+            "--color=never"
+            "--no-heading"
+            "--with-filename"
+            "--line-number"
+            "--column"
+            "--smart-case"
+          ] ++ customRipgrepArgs;
       };
     };
   };
