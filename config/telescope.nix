@@ -7,6 +7,8 @@
     { mode = [ "n" "v" ]; key = "<localleader>fb"; action = "<cmd>Telescope oldfiles<cr>"; }
   ];
 
+  # TODO: https://nix-community.github.io/nixvim/search/?option_scope=0&option=plugins.telescope.extensions.live-grep-args.enable&query=telescope*arg
+
   plugins.telescope = {
     enable = true;
     settings = {
