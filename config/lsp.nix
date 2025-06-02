@@ -75,10 +75,20 @@
   };
 
   extraConfigLua = ''
-    for type, icon in pairs({ Hint = "", Info = "", Warn = "", Error = "", }) do
-      local hl = "DiagnosticSign" .. type
-      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-    end
+    vim.diagnostic.config { 
+      signs = { 
+        text = {
+          [vim.diagnostic.severity.ERROR] = '',
+          [vim.diagnostic.severity.WARN] = '',
+          [vim.diagnostic.severity.INFO] = '',
+          [vim.diagnostic.severity.HINT] = '',
+        }
+      };
+      virtual_text = false; -- handled by tiny-inline-diagnostic
+      update_in_insert = true;
+      underline = true;
+      severity_sort = true;
+    }
   '';
 
 }
