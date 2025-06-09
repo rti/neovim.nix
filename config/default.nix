@@ -19,6 +19,7 @@
     ./camelcasemotion.nix
     ./git.nix
     ./vim-slime.nix
+    ./codecompanion.nix
     ./autohide-cursorline.nix
     ./auto-resize-windows.nix
     ./highlight-yank.nix
