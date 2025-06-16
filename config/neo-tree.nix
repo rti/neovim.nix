@@ -9,7 +9,11 @@
 
   plugins.neo-tree = {
     enable = true;
-    window.width = 30;
+
+    window = {
+      autoExpandWidth = true;
+      width = 30;
+    };
 
     filesystem = {
       groupEmptyDirs = true;
