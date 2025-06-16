@@ -10,8 +10,17 @@
   plugins.neo-tree = {
     enable = true;
     window.width = 30;
-    filesystem.groupEmptyDirs = true;
-    filesystem.scanMode = "deep";
+
+    filesystem = {
+      groupEmptyDirs = true;
+      scanMode = "deep";
+      followCurrentFile.enabled = true;
+    };
+
+    buffers = {
+      followCurrentFile.enabled = true;
+    };
+
     defaultComponentConfigs.diagnostics.symbols = {
       hint = "";
       info = "";
