@@ -10,6 +10,8 @@
   plugins.neo-tree = {
     enable = true;
 
+    popupBorderStyle = "rounded";
+
     window = {
       autoExpandWidth = true;
       width = 30;
