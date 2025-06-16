@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   keymaps = [
     { mode = [ "n" "v" ]; key = "<localleader>cc"; action = "<cmd>CodeCompanionChat Toggle<cr>"; }
@@ -8,6 +8,16 @@
 
   plugins.codecompanion = {
     enable = true;
+
+    package = (pkgs.vimUtils.buildVimPlugin {
+      pname = "codecompanion-nvim";
+      version = "2025-06-16";
+      src = pkgs.fetchurl {
+        url = "https://github.com/olimorris/codecompanion.nvim/archive/f0e5ec927081474465e9c08f42112c19995f94a9.tar.gz";
+        sha256 = "sha256-3AVevUdwfy0F4V99KW853aam3xlC2reMt/ojIrKxVO0=";
+      };
+    });
+
     settings = {
       adapters = {
         gemini = "gemini";
