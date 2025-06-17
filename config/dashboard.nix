@@ -25,9 +25,9 @@
           ""
         ];
         center = [
-          { desc = "New File"; icon = " "; action = "new|only"; }
-          { desc = "Recent Files"; icon = " "; action = "Telescope oldfiles"; }
           { desc = "Find Files"; icon = " "; action = "Telescope find_files"; }
+          { desc = "Recent Files"; icon = " "; action = "Telescope oldfiles"; }
+          { desc = "New File"; icon = " "; action = "new|only"; }
           { desc = "Exit"; icon = "󰩈 "; action = "exit"; }
         ];
 
