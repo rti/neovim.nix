@@ -20,10 +20,12 @@
       groupEmptyDirs = true;
       scanMode = "deep";
       followCurrentFile.enabled = true;
+      followCurrentFile.leaveDirsOpen = true;
     };
 
     buffers = {
       followCurrentFile.enabled = true;
+      followCurrentFile.leaveDirsOpen = true;
     };
 
     defaultComponentConfigs.diagnostics.symbols = {
