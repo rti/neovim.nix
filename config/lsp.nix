@@ -59,6 +59,7 @@
         jsonls.enable = true;
         phpactor.enable = true;
         tailwindcss.enable = true;
+        ts_ls.enable = true;
         vimls.enable = true;
         yamlls.enable = true;
       };
@@ -69,6 +70,7 @@
       sources = {
         formatting = {
           prettier.enable = true; # lots of web related filetypes
+          prettier.disableTsServerFormatter = true;
         };
       };
     };
