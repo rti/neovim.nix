@@ -259,6 +259,9 @@ let
       hi("IlluminatedWordRead", { bg = "${config.theme.backgroundGreen}", attr = "underline" })
       hi("IlluminatedWordWrite", { bg = "${config.theme.backgroundYellow}", attr = "underline" })
 
+      hi("@org.keyword.todo", { fg = "${config.theme.foregroundRed}" })
+      hi("@org.keyword.done", { fg = "${config.theme.foregroundGreen}" })
+
       vim.g.terminal_color_0 = "${config.theme.termBlack}"
       vim.g.terminal_color_1 = "${config.theme.termRed}"
       vim.g.terminal_color_2 = "${config.theme.termGreen}"
