@@ -39,6 +39,8 @@
           ] ++ customRipgrepArgs;
       };
     };
+
+    extensions.ui-select.enable = true;
   };
 
   extraPackages = with pkgs; [ ripgrep ];
