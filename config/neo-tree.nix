@@ -34,5 +34,9 @@
       warn = "";
       error = "";
     };
+
+    window.mappings = {
+      "g?" = "show_help";
+    };
   };
 }
