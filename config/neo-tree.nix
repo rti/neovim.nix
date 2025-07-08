@@ -39,6 +39,8 @@
 
     window.mappings = {
       "g?" = "show_help";
+      "/" = "noop";
+      "q" = "noop";
     };
   };
 }
