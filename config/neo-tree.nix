@@ -28,6 +28,8 @@
       followCurrentFile.leaveDirsOpen = true;
     };
 
+    defaultComponentConfigs.indent.withExpanders = true;
+
     defaultComponentConfigs.diagnostics.symbols = {
       hint = "";
       info = "";
