@@ -71,6 +71,11 @@
         formatting = {
           prettier.enable = true; # lots of web related filetypes
           prettier.disableTsServerFormatter = true;
+
+          opentofu_fmt.enable = true;
+        };
+        diagnostics = {
+          opentofu_validate.enable = true;
         };
       };
     };
