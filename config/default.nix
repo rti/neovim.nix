@@ -10,6 +10,7 @@
     ./treesitter.nix
     ./lsp.nix
     ./blink.nix
+    ./bufdelete.nix
     ./lualine.nix
     ./telescope.nix
     ./neo-tree.nix
