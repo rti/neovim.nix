@@ -25,5 +25,6 @@
     ./autohide-cursorline.nix
     ./auto-resize-windows.nix
     ./highlight-yank.nix
+    ./markdown.nix
   ];
 }
