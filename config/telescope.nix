@@ -17,6 +17,16 @@
           prompt_position = "top";
           preview_width = 0.55;
         };
+        mappings = {
+          n = {
+            "<C-N>".__raw = "require('telescope.actions').cycle_history_next";
+            "<C-P>".__raw = "require('telescope.actions').cycle_history_prev";
+          };
+          i = {
+            "<C-N>".__raw = "require('telescope.actions').cycle_history_next";
+            "<C-P>".__raw = "require('telescope.actions').cycle_history_prev";
+          };
+        };
         prompt_prefix = "   ";
         selection_caret = " ";
         sorting_strategy = "ascending";
