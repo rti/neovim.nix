@@ -12,8 +12,8 @@
     popupBorderStyle = "rounded";
 
     window = {
-      autoExpandWidth = true;
-      width = 30;
+      autoExpandWidth = false;
+      width = 32;
     };
 
     filesystem = {
