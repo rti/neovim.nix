@@ -51,6 +51,7 @@
     };
 
     extensions.ui-select.enable = true;
+    extensions.fzf-native.enable = true;
   };
 
   extraPackages = with pkgs; [ ripgrep ];
