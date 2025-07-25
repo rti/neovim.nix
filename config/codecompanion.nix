@@ -57,6 +57,11 @@
             adapter = default-adapter;
           };
         };
+
+      display.chat.window.opts = {
+        number = false;
+        relativenumber = false;
+        signcolumn = "yes:1";
       };
 
       opts = {
