@@ -22,6 +22,10 @@
         sign = false;
         width = "block";
       };
+      anti_conceal = {
+        enabled = true;
+        disabled_modes = [ "n" "c" "v" ];
+      };
     };
   };
 }
