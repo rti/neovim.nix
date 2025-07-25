@@ -26,6 +26,7 @@
         enabled = true;
         disabled_modes = [ "n" "c" "v" ];
       };
+      completions.blink.enabled = true;
     };
   };
 }
