@@ -41,18 +41,21 @@
         };
       };
 
-      strategies = {
-        agent = {
-          adapter = "llamacpp";
-          # adapter = "gemini";
-        };
-        chat = {
-          adapter = "llamacpp";
-          # adapter = "gemini";
-        };
-        inline = {
-          adapter = "llamacpp";
-          # adapter = "gemini";
+      strategies =
+        let
+          default-adapter = "gemini";
+          # default-adapter = "llamacpp"; 
+        in
+        {
+          agent = {
+            adapter = default-adapter;
+          };
+          chat = {
+            adapter = default-adapter;
+          };
+          inline = {
+            adapter = default-adapter;
+          };
         };
       };
 
