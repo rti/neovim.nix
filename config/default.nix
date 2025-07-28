@@ -26,5 +26,6 @@
     ./auto-resize-windows.nix
     ./highlight-yank.nix
     ./markdown.nix
+    ./colorizer.nix
   ];
 }
