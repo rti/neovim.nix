@@ -35,7 +35,7 @@
     # https://github.com/lewis6991/gitsigns.nvim
     gitsigns = {
       enable = true;
-      settings.current_line_blame = true;
+      settings.current_line_blame = false;
     };
 
     # https://github.com/akinsho/git-conflict.nvim
