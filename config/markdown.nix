@@ -26,6 +26,8 @@
         enabled = true;
         disabled_modes = [ "n" "c" "v" ];
       };
+
+      # TODO: should be handled by nixvim
       completions.blink.enabled = true;
     };
   };
