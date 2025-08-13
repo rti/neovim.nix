@@ -367,7 +367,7 @@ let
         c = { bg = "${config.theme.background4}", fg = "${config.theme.foreground}", gui = 'none' },
       },
       terminal = {
-        a = { bg = "${config.theme.foregroundCyan}", fg = "${config.theme.background}", gui = 'none', attr = "bold" },
+        a = { bg = "${config.theme.foregroundMagenta}", fg = "${config.theme.background}", gui = 'none', attr = "bold" },
         b = { bg = "${config.theme.background4}", fg = "${config.theme.foreground}", gui = 'none' },
         c = { bg = "${config.theme.background4}", fg = "${config.theme.foreground}", gui = 'none' },
       },
