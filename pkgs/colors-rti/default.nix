@@ -137,7 +137,12 @@ let
       hi("diffNewFile", { fg = "${config.theme.foregroundGreen}", bg = "${config.theme.background2}", attr = "italic" })
 
       hi("@text.diff.add.diff", "DiffAdd")
+      hi("@text.diff.change.diff", "DiffChange")
       hi("@text.diff.delete.diff", "DiffDelete")
+
+      hi("Added", "DiffAdd")
+      hi("Changed", "DiffChange")
+      hi("Removed", "DiffDelete")
 
       hi("GitSignsAdd", { fg = "${config.theme.brightGreen}" })
       hi("GitSignsAddInline", { fg = "${config.theme.foreground}", bg = "${config.theme.brightGreen}" })
