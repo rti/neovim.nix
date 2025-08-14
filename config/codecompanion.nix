@@ -43,8 +43,8 @@
 
       strategies =
         let
-          default-adapter = "gemini";
-          # default-adapter = "llamacpp"; 
+          # default-adapter = "gemini";
+          default-adapter = "llamacpp"; 
         in
         {
           agent = {
