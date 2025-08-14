@@ -150,6 +150,13 @@ let
       hi("GitSignsStagedDelete", { fg = "${config.theme.backgroundRed}" })
       hi("GitSignsCurrentLineBlame", { fg = "${config.theme.foreground4}", attr = "bold" })
 
+      hi("MiniDiffSignAdd", { fg = "${config.theme.brightGreen}" })
+      hi("MiniDiffSignChange", { fg = "${config.theme.brightYellow}" })
+      hi("MiniDiffSignDelete", { fg = "${config.theme.brightRed}" })
+      hi("MiniDiffOverAdd", { bg = "${config.theme.backgroundGreen}" })
+      hi("MiniDiffOverChange", { bg = "${config.theme.backgroundYellow}" })
+      hi("MiniDiffOverDelete", { bg = "${config.theme.backgroundRed}" })
+
       hi("DapUIType", "Normal")
       hi("DapUIScope", "Normal")
       hi("DapUIValue", "Normal")
