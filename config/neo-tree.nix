@@ -19,6 +19,7 @@
     filesystem = {
       groupEmptyDirs = true;
       scanMode = "deep";
+      useLibuvFileWatcher = true;
       followCurrentFile.enabled = true;
       followCurrentFile.leaveDirsOpen = true;
     };
