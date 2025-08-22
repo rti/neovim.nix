@@ -2,20 +2,19 @@
 
 {
   extraPlugins = [
-    (pkgs.vimUtils.buildVimPlugin {
-      pname = "llama.vim";
-      version = "dev";
-      src = pkgs.fetchurl {
-        url = "https://github.com/ggml-org/llama.vim/archive/163c87d169f4aaecc740c83902fe71bcffd9eda5.tar.gz";
-        sha256 = "sha256-jaPcAg5LoOerKbuWNvQomi5VREHbL1BksWHg2max7bs=";
-      };
-    })
+    pkgs.vimPlugins.llama-vim
   ];
 
   extraConfigLua = ''
     local function disable_llama_debug()
-      vim.cmd([[let g:llama_config.show_info = v:false]])
+      vim.cmd([[
+        let g:llama_config.show_info = v:false
+        let g:llama_config.keymap_accept_full = "<C-Tab>"
+        let g:llama_config.keymap_accept_line = "<Right>"
+        let g:llama_config.keymap_accept_word = "<C-F>"
+      ]])
     end
+
     vim.defer_fn(disable_llama_debug, 1000)
   '';
 
