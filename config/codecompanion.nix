@@ -72,4 +72,21 @@
       };
     };
   };
+
+  # ugly workaround for markdown not being completely rendered
+  extraConfigLua = ''
+    local function hook()
+      local group = vim.api.nvim_create_augroup("CodeCompanionHooks", {})
+      vim.api.nvim_create_autocmd({ "User" }, {
+        pattern = "CodeCompanionRequestFinished",
+        group = group,
+        callback = function(request)
+          vim.defer_fn(function()
+            require('render-markdown.core.manager').set_buf(request.buf, true)
+          end, 250)
+        end,
+      })
+    end
+    vim.defer_fn(hook, 1000)
+  '';
 }
