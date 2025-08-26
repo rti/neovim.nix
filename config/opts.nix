@@ -14,6 +14,7 @@
     list = true; # Show some invisible characters
     listchars = "tab:▸ ,trail:-,precedes:←,extends:→";
     mouse = "a"; # Mouse support
+    mousemodel = "extend"; # right click to select
     number = true; # Absolute line number
     relativenumber = true; # Relative line numbers
     scrolloff = 4; # Lines of context
