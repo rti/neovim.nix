@@ -1,7 +1,7 @@
 { pkgs, config, ... }:
 
 let
-  vimThemeLua = pkgs.writeTextDir "lua/colors/rti.lua" ''
+  vimThemeLua = pkgs.writeTextDir "lua/colors/rti.lua" /* lua */ ''
     local M = {}
 
     local function hi(hl_group, args)
@@ -347,11 +347,11 @@ let
     return M
   '';
 
-  vimTheme = pkgs.writeTextDir "colors/rti.vim" ''
+  vimTheme = pkgs.writeTextDir "colors/rti.vim" /* lua */ ''
     lua require("colors/rti").setup()
   '';
 
-  lualineTheme = pkgs.writeTextDir "lua/lualine/themes/rti.lua" ''
+  lualineTheme = pkgs.writeTextDir "lua/lualine/themes/rti.lua" /* lua */ ''
     return {
       normal = {
         a = { bg = "${config.theme.primary}", fg = "${config.theme.background}", gui = 'none', attr = "bold" },
