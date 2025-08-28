@@ -22,7 +22,9 @@
 
     # Tab stuff
     { mode = [ "n" ]; key = "]t"; action = "<cmd>tabnext<cr>"; }
+    { mode = [ "n" ]; key = "<C-Tab>"; action = "<cmd>tabnext<cr>"; }
     { mode = [ "n" ]; key = "[t"; action = "<cmd>tabprevious<cr>"; }
+    { mode = [ "n" ]; key = "<C-S-Tab>"; action = "<cmd>tabprevious<cr>"; }
     { mode = [ "n" ]; key = "<localleader>dt"; action = "<cmd>tabclose<cr>"; }
   ];
 }
