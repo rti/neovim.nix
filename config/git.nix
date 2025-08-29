@@ -9,11 +9,12 @@
     { mode = [ "n" ]; key = "]x"; action = "<Plug>(git-conflict-next-conflict)"; }
     { mode = [ "n" ]; key = "[x"; action = "<Plug>(git-conflict-prev-conflict)"; }
 
-    # MiniDiff
-    { mode = [ "n" ]; key = "]c"; action = "<cmd>lua MiniDiff.goto_hunk('next')<cr>"; }
-    { mode = [ "n" ]; key = "[c"; action = "<cmd>lua MiniDiff.goto_hunk('prev')<cr>"; }
-    { mode = [ "n" ]; key = "<localleader>gp"; action = "<cmd>lua MiniDiff.toggle_overlay()<cr>"; }
-    { mode = [ "n" ]; key = "<localleader>gR"; action = "<cmd>lua MiniDiff.do_hunks(0, 'reset')<cr>"; }
+    # gitsigns
+    { mode = [ "n" ]; key = "]c"; action = "<cmd>Gitsigns next_hunk<cr>"; }
+    { mode = [ "n" ]; key = "[c"; action = "<cmd>Gitsigns prev_hunk<cr>"; }
+    { mode = [ "n" ]; key = "<localleader>gp"; action = "<cmd>Gitsigns preview_hunk_inline<cr>"; }
+    { mode = [ "n" ]; key = "<localleader>g-"; action = "<cmd>Gitsigns stage_hunk<cr>"; }
+    { mode = [ "n" ]; key = "<localleader>gu"; action = "<cmd>Gitsigns undo_stage_hunk<cr>"; }
 
     # diffview
     { mode = [ "n" "v" ]; key = "<localleader>gd"; action = ":DiffviewOpen "; }
@@ -31,20 +32,10 @@
       settings.default_mappings = false;
     };
 
-    # https://github.com/echasnovski/mini.diff
-    mini = {
+    # https://github.com/lewis6991/gitsigns.nvim
+    gitsigns = {
       enable = true;
-      modules.diff = {
-        view = {
-          style = "sign";
-
-          signs = {
-            add = "┃";
-            change = "┃";
-            delete = "┃";
-          };
-        };
-      };
+      settings.current_line_blame = false;
     };
 
     # https://github.com/akinsho/git-conflict.nvim
