@@ -15,6 +15,7 @@
     { mode = [ "n" ]; key = "<localleader>gp"; action = "<cmd>Gitsigns preview_hunk_inline<cr>"; }
     { mode = [ "n" ]; key = "<localleader>g-"; action = "<cmd>Gitsigns stage_hunk<cr>"; }
     { mode = [ "n" ]; key = "<localleader>gu"; action = "<cmd>Gitsigns undo_stage_hunk<cr>"; }
+    { mode = [ "n" ]; key = "<localleader>gb"; action = "<cmd>Gitsigns blame<cr>"; }
 
     # diffview
     { mode = [ "n" "v" ]; key = "<localleader>gd"; action = ":DiffviewOpen "; }
