@@ -20,6 +20,11 @@
       };
     };
 
+    navic = {
+      enable = true;
+      settings.lsp.auto_attach = true;
+    };
+
     lsp = {
       enable = true;
       servers = {

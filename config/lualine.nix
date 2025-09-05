@@ -13,6 +13,7 @@
         always_show_tabline = false;
       };
       tabline = { lualine_a = [ "tabs" ]; };
+      sections = { lualine_x = [ "navic" ]; };
     };
   };
 }
