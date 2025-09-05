@@ -43,7 +43,8 @@
           # https://nix-community.github.io/nixvim/search/?query=pylsp*enabled
           # https://inventwithpython.com/blog/2022/11/19/python-linter-comparison-2022-pylint-vs-pyflakes-vs-flake8-vs-autopep8-vs-bandit-vs-prospector-vs-pylama-vs-pyroma-vs-black-vs-mypy-vs-radon-vs-mccabe/
           settings.plugins.rope.enabled = true; # refactoring code actions
-          settings.plugins.pyflakes.enabled = true; # linter for warnings and errors
+          # settings.plugins.pyflakes.enabled = true; # linter for warnings and errors
+          settings.plugins.pylint.enabled = true; # another linter...
           settings.plugins.pylsp_mypy.enabled = true; # type checker, but SLOW!
           settings.plugins.black.enabled = true; # formatting
 
