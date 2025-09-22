@@ -58,6 +58,12 @@
           #settings.plugins.ruff.enabled = true; 
         };
 
+        rust_analyzer = {
+          enable = true;
+          installRustc = false; # take from project
+          installCargo = false; # take from project
+        };
+
         bashls.enable = true;
         cssls.enable = true;
         dockerls.enable = true;
