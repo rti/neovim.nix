@@ -12,8 +12,20 @@
         section_separators = { left = ""; right = ""; };
         always_show_tabline = false;
       };
+
       tabline = { lualine_a = [ "tabs" ]; };
-      sections = { lualine_x = [ "navic" ]; };
+
+      sections = {
+        lualine_c = [
+          {
+            __unkeyed-1 = "filename";
+            path = 1; # https://github.com/nvim-lualine/lualine.nvim?tab=readme-ov-file#filename-component-options
+          }
+
+          "navic"
+        ];
+        # lualine_x = [ "navic" ];
+      };
     };
   };
 }
