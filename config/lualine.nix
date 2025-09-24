@@ -16,12 +16,16 @@
       tabline = { lualine_a = [ "tabs" ]; };
 
       sections = {
-        lualine_c = [
+        lualine_b = [
+          {
+            __unkeyed-1 = "branch";
+          }
           {
             __unkeyed-1 = "filename";
             path = 1; # https://github.com/nvim-lualine/lualine.nvim?tab=readme-ov-file#filename-component-options
           }
-
+        ];
+        lualine_c = [
           "navic"
         ];
         # lualine_x = [ "navic" ];
