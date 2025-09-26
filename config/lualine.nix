@@ -25,9 +25,13 @@
           }
         ];
         lualine_c = [ "navic" ];
-        lualine_x = [{ __unkeyed-1 = null; }];
-        lualine_y = [ "filetype" ];
-        lualine_z = [ "progress" ];
+        lualine_x = [ "filetype" ];
+        lualine_y = [ "progress" ];
+        lualine_z = [ "location" ];
+      };
+
+      inactive_sections = {
+        lualine_x = [ "progress" ];
       };
     };
   };
