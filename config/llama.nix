@@ -9,9 +9,9 @@
     local function disable_llama_debug()
       vim.cmd([[
         let g:llama_config.show_info = v:false
-        let g:llama_config.keymap_accept_full = "<S-Tab>"
-        let g:llama_config.keymap_accept_line = "<Right>"
         let g:llama_config.keymap_accept_word = "<C-F>"
+        let g:llama_config.keymap_accept_line = "<C-G>"
+        let g:llama_config.keymap_accept_full = "<S-Tab>"
       ]])
     end
 
