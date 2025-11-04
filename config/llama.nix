@@ -16,6 +16,10 @@
     end
 
     vim.defer_fn(disable_llama_debug, 1000)
+
+    -- free the CTRL-G keymap in insert mode
+    vim.api.nvim_del_keymap("i", "<C-G>s")
+    vim.api.nvim_del_keymap("i", "<C-G>S")
   '';
 
   extraPackages = with pkgs; [ curl ];
