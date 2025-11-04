@@ -13,9 +13,12 @@
     enable = true;
     settings = {
       defaults = {
+        layout_strategy = "vertical";
         layout_config = {
+          height = 0.95; # full telescope height
           prompt_position = "top";
-          preview_width = 0.55;
+          mirror = true;
+          preview_height = 0.75;
         };
         mappings = {
           n = {
