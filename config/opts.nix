@@ -18,7 +18,6 @@
     number = true; # Absolute line number
     relativenumber = true; # Relative line numbers
     scrolloff = 4; # Lines of context
-    shell = "zsh"; # Use zsh shell
     shiftround = true; # Round indent
     shiftwidth = 2; # Size of an indent
     shortmess = "filnxttTF"; # Shorten certain messages
