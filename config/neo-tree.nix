@@ -22,6 +22,8 @@
       useLibuvFileWatcher = true;
       followCurrentFile.enabled = true;
       followCurrentFile.leaveDirsOpen = true;
+      filteredItems.hideDotfiles = false;
+      filteredItems.hideGitignored = true;
     };
 
     buffers = {
