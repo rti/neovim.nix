@@ -22,8 +22,16 @@
       useLibuvFileWatcher = true;
       followCurrentFile.enabled = true;
       followCurrentFile.leaveDirsOpen = true;
-      filteredItems.hideDotfiles = false;
-      filteredItems.hideGitignored = true;
+      filteredItems = {
+        hideDotfiles = false;
+        hideGitignored = true;
+        neverShow = [
+          ".DS_Store"
+          "thumbs.db"
+          ".git"
+        ];
+      };
+
     };
 
     buffers = {
