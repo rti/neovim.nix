@@ -46,5 +46,8 @@
       enable = true;
       enhancedDiffHl = true;
     };
+
+    # https://github.com/pwntester/octo.nvim
+    octo.enable = true;
   };
 }
