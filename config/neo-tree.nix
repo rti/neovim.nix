@@ -9,50 +9,52 @@
   plugins.neo-tree = {
     enable = true;
 
-    popupBorderStyle = "rounded";
+    settings = {
+      popupBorderStyle = "rounded";
 
-    window = {
-      autoExpandWidth = false;
-      width = 32;
-    };
+      window = {
+        autoExpandWidth = false;
+        width = 32;
 
-    filesystem = {
-      groupEmptyDirs = true;
-      scanMode = "deep";
-      useLibuvFileWatcher = true;
-      followCurrentFile.enabled = true;
-      followCurrentFile.leaveDirsOpen = true;
-      filteredItems = {
-        hideDotfiles = false;
-        hideGitignored = true;
-        neverShow = [
-          ".DS_Store"
-          "thumbs.db"
-          ".git"
-        ];
+        mappings = {
+          "g?" = "show_help";
+          "/" = "noop";
+          "?" = "noop";
+          "q" = "noop";
+        };
       };
 
-    };
+      filesystem = {
+        groupEmptyDirs = true;
+        scanMode = "deep";
+        useLibuvFileWatcher = true;
+        followCurrentFile.enabled = true;
+        followCurrentFile.leaveDirsOpen = true;
+        filteredItems = {
+          hideDotfiles = false;
+          hideGitignored = true;
+          neverShow = [
+            ".DS_Store"
+            "thumbs.db"
+            ".git"
+          ];
+        };
 
-    buffers = {
-      followCurrentFile.enabled = true;
-      followCurrentFile.leaveDirsOpen = true;
-    };
+      };
 
-    defaultComponentConfigs.indent.withExpanders = true;
+      buffers = {
+        followCurrentFile.enabled = true;
+        followCurrentFile.leaveDirsOpen = true;
+      };
 
-    defaultComponentConfigs.diagnostics.symbols = {
-      hint = "";
-      info = "";
-      warn = "";
-      error = "";
-    };
+      defaultComponentConfigs.indent.withExpanders = true;
 
-    window.mappings = {
-      "g?" = "show_help";
-      "/" = "noop";
-      "?" = "noop";
-      "q" = "noop";
+      defaultComponentConfigs.diagnostics.symbols = {
+        hint = "";
+        info = "";
+        warn = "";
+        error = "";
+      };
     };
   };
 }

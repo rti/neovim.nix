@@ -44,7 +44,7 @@
     # https://github.com/akinsho/git-conflict.nvim
     diffview = {
       enable = true;
-      enhancedDiffHl = true;
+      settings.enhanced_diff_hl = true;
     };
 
     # https://github.com/pwntester/octo.nvim
