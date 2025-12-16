@@ -25,9 +25,11 @@ let
 
       hi("Normal", { fg = "${config.theme.foreground}" })
       hi("NormalNC", "Normal")
-      hi("NormalFloat", "Normal")
+      -- hi("NormalFloat", "Normal")
+      hi("NormalFloat", { bg="${config.theme.background2}" })
       hi("typescriptParens", "NormalFloat") -- ???
-      hi("FloatBorder", { fg = "${config.theme.foreground4}" })
+      -- hi("FloatBorder", { fg = "${config.theme.foreground4}" })
+      hi("FloatBorder", { bg="${config.theme.background2}", fg = "${config.theme.foreground4}" })
       hi("VertSplit", { fg = "${config.theme.background3}" })
       hi("WinSeparator", "VertSplit")
 
