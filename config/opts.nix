@@ -47,6 +47,7 @@
     showbreak = "·"; # Character to show at the end of wrapped lines
     fillchars = "diff:╱"; # Fill chars
     cmdheight = 1; # Cmd line height/hiding
+    iskeyword = "@,48-57,_,192-255,-"; # Word characters
   };
 
     clipboard.register = "unnamedplus";
