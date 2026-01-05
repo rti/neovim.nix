@@ -25,8 +25,27 @@
           }
         ];
         lualine_c = [ "navic" ];
-        lualine_x = [ "filetype" ];
-        lualine_y = [ "progress" ];
+        lualine_x = [
+          # macro recording information
+          {
+            __unkeyed-1.__raw = ''
+              function()
+                return require('noice').api.statusline.mode.get():gsub('recording', 'rec')
+              end
+            '';
+            cond.__raw = ''
+              function()
+                local noice = require("noice")
+                if noice.api.statusline.mode.has() and noice.api.statusline.mode.get():find("^recording") then
+                  return true
+                else
+                  return false
+                end
+              end
+            '';
+          }
+        ];
+        lualine_y = [ "filetype" "progress" ];
         lualine_z = [ "location" ];
       };
 

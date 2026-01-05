@@ -28,6 +28,17 @@
           };
         };
       };
+
+      routes = [
+        # Prevent search virtual text messages
+        {
+          filter = {
+            event = "msg_show";
+            kind = "search_count";
+          };
+          opts = { skip = true; };
+        }
+      ];
     };
   };
 }
