@@ -1,6 +1,10 @@
 { ... }:
 
 {
+  keymaps = [
+    { mode = [ "n" "v" ]; key = "<localleader>m"; action = "<cmd>RenderMarkdown buf_toggle<cr>"; }
+  ];
+
   plugins.render-markdown = {
     enable = true;
     settings = {
@@ -27,12 +31,14 @@
         width = "block";
       };
       anti_conceal = {
-        enabled = true;
-        disabled_modes = [ "n" "c" "v" ];
+        enabled = false;
+        # enabled = true;
+        # disabled_modes = [ "n" "c" "v" ];
       };
 
       # TODO: should be handled by nixvim
       completions.blink.enabled = true;
     };
   };
+
 }
