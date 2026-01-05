@@ -40,7 +40,7 @@
     whichwrap = "b,s"; # Backspace and cursor keys wrap
     wildignore = ""; # Ignore files in wildmenu
     wildmenu = false; # Do not classic list of completions in cmd
-    wrap = false; # line wrap
+    wrap = true; # line wrap
     splitkeep = "screen"; # Keep the text on the same screen line when split
     linebreak = true; # Break lines at breakat (default " ^I!@*-+;:,./?")
     breakindent = true; # Wrapped line will continue visually indented
