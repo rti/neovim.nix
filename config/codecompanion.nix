@@ -9,29 +9,59 @@
   plugins.codecompanion = {
     enable = true;
 
-    package = (pkgs.vimUtils.buildVimPlugin {
-      pname = "codecompanion-nvim";
-      version = "2025-06-16";
-      src = pkgs.fetchurl {
-        url = "https://github.com/olimorris/codecompanion.nvim/archive/f0e5ec927081474465e9c08f42112c19995f94a9.tar.gz";
-        sha256 = "sha256-3AVevUdwfy0F4V99KW853aam3xlC2reMt/ojIrKxVO0=";
-      };
-    });
+    # package = (pkgs.vimUtils.buildVimPlugin {
+    #   pname = "codecompanion-nvim";
+    #   version = "2025-06-16";
+    #   src = pkgs.fetchurl {
+    #     url = "https://github.com/olimorris/codecompanion.nvim/archive/f0e5ec927081474465e9c08f42112c19995f94a9.tar.gz";
+    #     sha256 = "sha256-3AVevUdwfy0F4V99KW853aam3xlC2reMt/ojIrKxVO0=";
+    #   };
+    # });
 
     settings = {
+      interactions = {
+        chat = {
+          adapter = "gemini_cli";
+        };
+        inline = {
+          adapter = "llamacpp";
+        };
+        cmd = {
+          adapter = "llamacpp";
+        };
+      };
+
       adapters = {
-        gemini = "gemini";
-        llamacpp = {
-          __raw = ''
-            function()
-              return require("codecompanion.adapters").extend("openai_compatible", {
-                env = {
-                  url = "http://localhost:8080";
-                  chat_url = "/v1/chat/completions";
-                };
-              })
-            end
-          '';
+
+        acp = {
+          gemini_cli = {
+            __raw = /*lua*/ ''
+              function()
+                return require("codecompanion.adapters").extend("gemini_cli", {
+                  defaults = {
+                    auth_method = "vertex-ai",
+                  },
+                })
+              end
+            '';
+          };
+        };
+
+        http = {
+          # gemini = "gemini";
+          llamacpp = {
+            __raw = ''
+              function()
+                return require("codecompanion.adapters").extend("openai_compatible", {
+                  env = {
+                    -- url = "http://localhost:8080";
+                    url = "http://localhost:8013"; -- llama-server --gpt-oss
+                    chat_url = "/v1/chat/completions";
+                  };
+                })
+              end
+            '';
+          };
         };
 
         opts = {
@@ -40,23 +70,6 @@
           proxy = null;
         };
       };
-
-      strategies =
-        let
-          # default-adapter = "gemini";
-          default-adapter = "llamacpp"; 
-        in
-        {
-          agent = {
-            adapter = default-adapter;
-          };
-          chat = {
-            adapter = default-adapter;
-          };
-          inline = {
-            adapter = default-adapter;
-          };
-        };
 
       display.chat.window.opts = {
         number = false;
@@ -89,4 +102,6 @@
     end
     vim.defer_fn(hook, 1000)
   '';
+
+  extraPackages = with pkgs; [ gemini-cli ];
 }
