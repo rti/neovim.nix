@@ -55,9 +55,11 @@
             __raw = ''
               function()
                 return require("codecompanion.adapters").extend("openai_compatible", {
+                  name = "llamacpp",
+                  formatted_name = "llama.cpp",
                   env = {
                     -- url = "http://localhost:8080";
-                    url = "http://localhost:8013"; -- llama-server --gpt-oss
+                    url = "http://localhost:8013"; -- llama-server --gpt-oss-20b-default
                     chat_url = "/v1/chat/completions";
                   };
                 })
