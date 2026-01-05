@@ -7,15 +7,19 @@
       file_types = [ "markdown" "codecompanion" ];
       heading = {
         sign = false;
-        border = true;
+        # border = true;
+        border = false;
+        width = "block";
+        left_pad = 2;
+        right_pad = 4;
       };
       bullet = {
         icons = [ "• " "• " ];
       };
       code = {
-        above = " ";
-        below = " ";
-        border = "thick";
+        # above = " ";
+        # below = " ";
+        # border = "thick";
         language_pad = 2;
         left_pad = 2;
         right_pad = 2;
