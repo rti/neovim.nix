@@ -45,6 +45,8 @@
               end
             '';
           };
+
+          opts.show_presets = false;
         };
 
         http = {
@@ -62,13 +64,10 @@
               end
             '';
           };
+
+          opts.show_presets = false;
         };
 
-        opts = {
-          allow_insecure = false;
-          show_defaults = false;
-          proxy = null;
-        };
       };
 
       display.chat.window.opts = {
