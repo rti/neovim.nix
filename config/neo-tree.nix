@@ -10,10 +10,26 @@
     enable = true;
 
     settings = {
-      popupBorderStyle = "rounded";
+      popup_border_style = "rounded";
+
+      default_component_configs = {
+        indent = {
+          with_expanders = true;
+          expander_collapsed = "";
+          expander_expanded = "";
+          expander_highlight = "NeoTreeExpander";
+        };
+        diagnostics = {
+          symbols = {
+            hint = "";
+            info = "";
+            warn = "";
+            error = "";
+          };
+        };
+      };
 
       window = {
-        autoExpandWidth = false;
         width = 32;
 
         mappings = {
@@ -25,35 +41,22 @@
       };
 
       filesystem = {
-        groupEmptyDirs = true;
-        scanMode = "deep";
-        useLibuvFileWatcher = true;
-        followCurrentFile.enabled = true;
-        followCurrentFile.leaveDirsOpen = true;
-        filteredItems = {
-          hideDotfiles = false;
-          hideGitignored = true;
-          neverShow = [
-            ".DS_Store"
-            "thumbs.db"
-            ".git"
-          ];
-        };
+        group_empty_dirs = true;
+        scan_mode = "deep";
+        use_libuv_file_watcher = true;
+        follow_current_file.enabled = true;
+        follow_current_file.leave_dirs_open = true;
 
+        filtered_items = {
+          hide_dotfiles = false;
+          hide_ignored = true;
+          never_show = [ ".DS_Store" "thumbs.db" ".git" ];
+        };
       };
 
       buffers = {
-        followCurrentFile.enabled = true;
-        followCurrentFile.leaveDirsOpen = true;
-      };
-
-      defaultComponentConfigs.indent.withExpanders = true;
-
-      defaultComponentConfigs.diagnostics.symbols = {
-        hint = "";
-        info = "";
-        warn = "";
-        error = "";
+        follow_current_file.enabled = true;
+        follow_current_file.leave_dirs_open = true;
       };
     };
   };
