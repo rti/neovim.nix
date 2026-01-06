@@ -54,7 +54,7 @@ let
       hi("Function", { fg = "${config.theme.foregroundBlue}",attr = "bold" })
       hi("Identifier", { fg = "${config.theme.foregroundGreen}", attr = "bold" })
       hi("Keyword", { fg = "${config.theme.foreground}", attr = "italic" })
-      hi("NonText", { fg = "${config.theme.background3}" })
+      hi("NonText", { fg = "${config.theme.background4}" })
       hi("Number", { fg = "${config.theme.foreground}" })
       hi("PreProc", { fg = "${config.theme.foreground}" })
       hi("Special", { fg = "${config.theme.foreground}" })
