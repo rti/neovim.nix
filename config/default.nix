@@ -27,5 +27,6 @@
     ./highlight-yank.nix
     ./markdown.nix
     ./colorizer.nix
+    ./illuminate.nix
   ];
 }
