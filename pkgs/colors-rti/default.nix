@@ -303,9 +303,9 @@ let
       hi("@text.literal", { fg = "${config.theme.foreground2}" })
 
       hi("@org.headline.level1", { fg = "${config.theme.foreground}", bg = "${config.theme.backgroundCyan}", attr = "bold" })
-      hi("@org.headline.level2", { fg = "${config.theme.foreground}", bg = "${config.theme.backgroundMagenta}", attr = "bold" })
-      hi("@org.headline.level3", { fg = "${config.theme.foreground}", bg = "${config.theme.backgroundGreen}", attr = "bold" })
-      hi("@org.headline.level4", { fg = "${config.theme.foreground}", bg = "${config.theme.backgroundYellow}", attr = "bold" })
+      hi("@org.headline.level2", { fg = "${config.theme.foreground}", bg = "${config.theme.backgroundYellow}", attr = "bold" })
+      hi("@org.headline.level3", { fg = "${config.theme.foreground}", bg = "${config.theme.backgroundMagenta}", attr = "bold" })
+      hi("@org.headline.level4", { fg = "${config.theme.foreground}", bg = "${config.theme.backgroundGreen}", attr = "bold" })
       hi("@org.headline.level5", { fg = "${config.theme.foreground}", bg = "${config.theme.backgroundRed}", attr = "bold" })
       hi("@org.headline.level6", { fg = "${config.theme.foreground}", bg = "${config.theme.background4}", attr = "bold" })
       hi("@org.headline.level7", { fg = "${config.theme.foreground}", bg = "${config.theme.background3}", attr = "bold" })
