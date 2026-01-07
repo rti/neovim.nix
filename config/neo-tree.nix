@@ -19,6 +19,21 @@
           expander_expanded = "";
           expander_highlight = "NeoTreeExpander";
         };
+        git_status = {
+          symbols = {
+            # Change type
+            added     = "";
+            deleted   = "";
+            modified  = "";
+            renamed   = "󰁕";
+            # Status type
+            untracked = "";
+            ignored   = "";
+            unstaged  = "󰄱 ";
+            staged    = " ";
+            conflict  = "";
+          };
+        };
         diagnostics = {
           symbols = {
             hint = "";
