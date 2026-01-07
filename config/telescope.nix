@@ -69,7 +69,7 @@
       settings.mappings = {
         i = {
           "<C-i>" = {
-            __raw = "require(\"telescope-live-grep-args.actions\").quote_prompt({ postfix = \" --iglob */**\" })";
+            __raw = "require(\"telescope-live-grep-args.actions\").quote_prompt({ postfix = \" --iglob **\" })";
           };
           "<C-k>" = {
             __raw = "require(\"telescope-live-grep-args.actions\").quote_prompt()";
