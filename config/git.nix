@@ -3,7 +3,7 @@
 {
   keymaps = [
     # fugitive
-    { mode = [ "n" "v" ]; key = "<localleader>gs"; action = "<cmd>vertical botright Git<cr>"; }
+    { mode = [ "n" "v" ]; key = "<localleader>gs"; action = "<cmd>rightbelow G<cr>"; }
 
     # git-conflict
     { mode = [ "n" ]; key = "]x"; action = "<Plug>(git-conflict-next-conflict)"; }
