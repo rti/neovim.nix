@@ -28,5 +28,6 @@
     ./markdown.nix
     ./colorizer.nix
     ./illuminate.nix
+    ./wrap.nix
   ];
 }
