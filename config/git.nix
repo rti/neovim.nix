@@ -49,5 +49,8 @@
 
     # https://github.com/pwntester/octo.nvim
     octo.enable = true;
+
+    # https://github.com/NeogitOrg/neogit
+    neogit.enable = true;
   };
 }
