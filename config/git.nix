@@ -1,9 +1,14 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
+  extraPackages = with pkgs; [ git-absorb ];
+
   keymaps = [
     # fugitive
-    { mode = [ "n" "v" ]; key = "<localleader>gs"; action = "<cmd>rightbelow G<cr>"; }
+    # { mode = [ "n" "v" ]; key = "<localleader>gs"; action = "<cmd>rightbelow G<cr>"; }
+
+    # neogit
+    { mode = [ "n" "v" ]; key = "<localleader>gs"; action = "<cmd>Neogit kind=split<cr>"; }
 
     # git-conflict
     { mode = [ "n" ]; key = "]x"; action = "<Plug>(git-conflict-next-conflict)"; }
@@ -51,6 +56,63 @@
     octo.enable = true;
 
     # https://github.com/NeogitOrg/neogit
-    neogit.enable = true;
+    neogit = {
+      enable = true;
+      settings = {
+        disable_builtin_notifications = true;
+        disable_commit_confirmation = true;
+
+        kind = "split";
+        commit_popup = {
+          kind = "floating";
+        };
+        integrations = {
+          diffview = true;
+        };
+        mappings = {
+          popup = {
+            "g?" = "HelpPopup";
+            "?" = null;
+          };
+          finder = {
+            "<esc>" = "NOP";
+          };
+          commit_view = {
+            "<esc>" = "NOP";
+
+          };
+        };
+        popup = {
+          kind = "floating";
+        };
+        preview_buffer = {
+          kind = "floating";
+        };
+
+        # sections = {
+        #   recent = {
+        #     folded = true;
+        #   };
+        #   staged = {
+        #     folded = false;
+        #   };
+        #   stashes = {
+        #     folded = true;
+        #   };
+        #   unmerged = {
+        #     folded = false;
+        #   };
+        #   unpulled = {
+        #     folded = true;
+        #   };
+        #   unstaged = {
+        #     folded = false;
+        #   };
+        #   untracked = {
+        #     folded = false;
+        #   };
+        # };
+      };
+    };
   };
 }
