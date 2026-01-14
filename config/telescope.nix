@@ -5,6 +5,7 @@
     { mode = [ "n" "v" ]; key = "<localleader>ff"; action = "<cmd>Telescope find_files<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>fg"; action = ":lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>fb"; action = "<cmd>Telescope oldfiles<cr>"; }
+    { mode = [ "n" "v" ]; key = "<localleader>fn"; action = "<cmd>Telescope noice<cr>"; }
   ];
 
   # TODO: https://nix-community.github.io/nixvim/search/?option_scope=0&option=plugins.telescope.extensions.live-grep-args.enable&query=telescope*arg
