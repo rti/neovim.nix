@@ -3,7 +3,6 @@
 {
   keymaps = [
     # Vim convenience
-    { mode = [ "n" "v" ]; key = "<localleader>O"; action = "<cmd>only<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>q"; action = "<cmd>q<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>Q"; action = "<cmd>qa!<cr>"; }
     { mode = [ "n" ]; key = "K"; action = "i<cr><esc>"; }
