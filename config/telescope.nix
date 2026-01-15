@@ -32,7 +32,8 @@
           height = 0.95; # full telescope height
           prompt_position = "top";
           mirror = true;
-          preview_height = 0.75;
+          # preview_height = 0.75; # breaks the seletion in neogit
+          # should we use a different picker for neogit
         };
         mappings = {
           n = {
