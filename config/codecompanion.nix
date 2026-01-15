@@ -1,7 +1,9 @@
 { pkgs, ... }:
 {
   keymaps = [
-    { mode = [ "n" "v" ]; key = "<localleader>cc"; action = "<cmd>CodeCompanionChat Toggle<cr>"; }
+    { mode = [ "n" "v" ]; key = "<localleader>cl"; action = "<cmd>CodeCompanionChat adapter=llamacpp<cr>"; }
+    { mode = [ "n" "v" ]; key = "<localleader>cg"; action = "<cmd>CodeCompanionChat adapter=gemini_cli<cr>"; }
+    { mode = [ "n" "v" ]; key = "<localleader>ct"; action = "<cmd>CodeCompanionChat Toggle<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>ca"; action = "<cmd>CodeCompanionActions<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>ci"; action = "<cmd>CodeCompanion<cr>"; }
   ];
@@ -21,7 +23,16 @@
     settings = {
       interactions = {
         chat = {
-          adapter = "gemini_cli";
+          adapter = "llamacpp";
+          keymaps = {
+            options.modes = {
+              n = "g?";
+            };
+            send.modes = {
+              n = [ "<CR>" "<C-s>" "<S-CR>" "<C-CR>" ];
+              i = [ "<C-s>" "<S-CR>" "<C-CR>" ];
+            };
+          };
         };
         inline = {
           adapter = "llamacpp";
@@ -32,7 +43,6 @@
       };
 
       adapters = {
-
         acp = {
           gemini_cli = {
             __raw = /*lua*/ ''
@@ -50,7 +60,6 @@
         };
 
         http = {
-          # gemini = "gemini";
           llamacpp = {
             __raw = ''
               function()
@@ -72,10 +81,24 @@
 
       };
 
-      display.chat.window.opts = {
-        number = false;
-        relativenumber = false;
-        signcolumn = "yes:1";
+      display.chat = {
+        intro_message = "Welcome to CodeCompanion";
+        show_settings = true;
+        start_in_insert_mode = false;
+
+        window = {
+          width = 104;
+          layout = "vertical";
+
+          opts = {
+            number = false;
+            relativenumber = false;
+            signcolumn = "yes:1";
+            breakindent = true;
+            linebreak = true;
+            wrap = true;
+          };
+        };
       };
 
       opts = {
