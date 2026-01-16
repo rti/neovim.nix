@@ -57,12 +57,17 @@
           popup = {
             "g?" = "HelpPopup";
             "?" = false;
+            "q" = false;
           };
           # finder = { "<esc>" = false; };
           # commit_view = { "<esc>" = false; };
 
           commit_view = {
             "gf" = "OpenFileInWorktree";
+            # "q" = false; # no effect. why?
+          };
+          commit_editor = {
+            # "q" = false; # no effect. why?
           };
         };
 
