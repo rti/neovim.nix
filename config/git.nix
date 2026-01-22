@@ -93,7 +93,10 @@
     # https://github.com/lewis6991/gitsigns.nvim
     gitsigns = {
       enable = true;
-      settings.current_line_blame = false;
+      settings = {
+        current_line_blame = false;
+        sign_priority = 20; # always in front
+      };
     };
 
     # https://github.com/akinsho/git-conflict.nvim
