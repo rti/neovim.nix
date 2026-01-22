@@ -54,7 +54,7 @@
         jsonls.enable = true;
         phpactor.enable = true;
         tailwindcss.enable = true;
-        terraform_lsp.enable = true;
+        tofu_ls.enable = true;
         ts_ls.enable = true;
         vimls.enable = true;
         yamlls.enable = true;
