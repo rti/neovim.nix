@@ -40,7 +40,13 @@
           installCargo = false; # take from project
         };
 
-        basedpyright.enable = true;
+        basedpyright = {
+          enable = true;
+          settings = {
+            basedpyright.analysis.typeCheckingMode = "standard";
+          };
+        };
+
         bashls.enable = true;
         cssls.enable = true;
         dockerls.enable = true;
