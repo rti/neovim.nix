@@ -59,6 +59,8 @@
       enable = true;
       sources = {
         formatting = {
+          black.enable = true;
+
           prettier.enable = true; # lots of web related filetypes
           prettier.disableTsServerFormatter = true;
 
