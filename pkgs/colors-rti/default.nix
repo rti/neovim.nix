@@ -296,8 +296,8 @@ let
       hi("RenderMarkdownError", "Normal")
 
       hi("modelChatMessageAssistant", { fg = "${config.theme.foregroundGreen}" })
-      hi("llama_hl_hint", { fg = "${config.theme.foreground3}"})
-      hi("llama_hl_info", { fg = "${config.theme.foreground4}"})
+      hi("llama_hl_fim_hint", { fg = "${config.theme.foreground3}"})
+      hi("llama_hl_fim_info", { fg = "${config.theme.foreground4}"})
 
       -- e.g. Markdown Code
       hi("@text.literal", { fg = "${config.theme.foreground2}" })
