@@ -298,9 +298,8 @@ let
       hi("modelChatMessageAssistant", { fg = "${config.theme.foregroundGreen}" })
       hi("llama_hl_hint", { fg = "${config.theme.foreground3}"})
       hi("llama_hl_info", { fg = "${config.theme.foreground4}"})
-      -- nixos-26.05
-      -- hi("llama_hl_fim_hint", { fg = "${config.theme.foreground3}"})
-      -- hi("llama_hl_fim_info", { fg = "${config.theme.foreground4}"})
+      hi("llama_hl_fim_hint", { fg = "${config.theme.foreground3}"})
+      hi("llama_hl_fim_info", { fg = "${config.theme.foreground4}"})
 
       -- e.g. Markdown Code
       hi("@text.literal", { fg = "${config.theme.foreground2}" })
@@ -438,7 +437,7 @@ let
       hi("NeogitCommandCodeError", { fg = "${config.theme.foregroundRed}" })
       hi("NeogitFloatHeader", "Title")
       hi("NeogitFloatHeaderHighlight", { bg = "${config.theme.backgroundBlue}" })
-      
+
       vim.g.terminal_color_0 = "${config.theme.termBlack}"
       vim.g.terminal_color_1 = "${config.theme.termRed}"
       vim.g.terminal_color_2 = "${config.theme.termGreen}"
