@@ -5,7 +5,7 @@
 
   keymaps = [
     # neogit
-    { mode = [ "n" "v" ]; key = "<localleader>gs"; action = "<cmd>Neogit kind=split<cr>"; }
+    { mode = [ "n" "v" ]; key = "<localleader>gs"; action = "<cmd>Neogit<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>gl"; action = ":lua require('neogit').action('log', 'log_head', {'--graph', '--decorate'})()<cr>"; }
 
     # git-conflict
@@ -40,7 +40,7 @@
 
         graph_style = "kitty";
 
-        kind = "split";
+        kind = "vsplit";
 
         integrations = {
           diffview = true;
@@ -71,16 +71,15 @@
           };
         };
 
-        commit_popup = { kind = "floating"; };
-        commit_editor = { 
-          kind = "vsplit"; 
-          # kind = "floating"; 
+        commit_editor = {
+          kind = "vsplit";
           show_staged_diff = true;
           staged_diff_split_kind = "split";
         };
-        commit_select = { kind = "floating"; };
-        popup = { kind = "floating"; };
-        preview_buffer = { kind = "floating"; };
+        commit_popup.kind = "split";
+        commit_select.kind = "split";
+        popup.kind = "split";
+        preview_buffer.kind = "split";
       };
     };
 
