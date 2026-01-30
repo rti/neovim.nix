@@ -80,6 +80,7 @@
         commit_select.kind = "split";
         popup.kind = "split";
         preview_buffer.kind = "split";
+        log_view.kind = "split";
       };
     };
 
