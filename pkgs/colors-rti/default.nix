@@ -184,7 +184,7 @@ let
       hi("DapUIBreakpointsPath", "Normal")
       hi("DapUIBreakpointsCurrentLine", "Normal")
 
-      hi("FoldColumn", { fg = "${config.theme.background3}" })
+      hi("FoldColumn", { fg = "${config.theme.foreground4}" })
       hi("Folded", { fg = "${config.theme.foreground3}", bg = "${config.theme.background2}" })
 
       hi("MatchParen", { fg = "${config.theme.foreground}", bg = "${config.theme.backgroundMagenta}" })

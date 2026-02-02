@@ -45,7 +45,7 @@
     linebreak = true; # Break lines at breakat (default " ^I!@*-+;:,./?")
     breakindent = true; # Wrapped line will continue visually indented
     showbreak = "·"; # Character to show at the end of wrapped lines
-    fillchars = "diff:╱"; # Fill chars
+    fillchars = "diff:╱,foldopen:,foldclose:"; # Fill chars
     cmdheight = 1; # Cmd line height/hiding
     iskeyword = "@,48-57,_,192-255,-"; # Word characters
   };
