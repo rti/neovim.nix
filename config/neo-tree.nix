@@ -48,10 +48,16 @@
         width = 32;
 
         mappings = {
+          # common help shortcut across plugins
           "g?" = "show_help";
+
+          # restore default vim movement
           "/" = "noop";
           "?" = "noop";
           "q" = "noop";
+          "zz" = "noop";
+          "zb" = "noop";
+          "zt" = "noop";
         };
       };
 
