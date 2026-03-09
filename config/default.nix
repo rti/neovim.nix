@@ -12,6 +12,7 @@
     ./blink.nix
     ./bufdelete.nix
     ./lualine.nix
+    ./snacks.nix
     ./telescope.nix
     ./neo-tree.nix
     ./dashboard.nix
