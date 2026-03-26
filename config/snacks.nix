@@ -5,6 +5,9 @@
       picker = {
         enabled = true;
       };
+      input = {
+        enabled = true;
+      };
     };
   };
 }
