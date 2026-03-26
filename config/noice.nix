@@ -1,6 +1,10 @@
 { ... }:
 
 {
+  keymaps = [
+    { mode = [ "n" "v" ]; key = "<localleader>pp"; action = "<cmd>NoiceAll<cr><cmd>normal G<cr>"; }
+  ];
+
   plugins.noice = {
     enable = true;
     settings = {
