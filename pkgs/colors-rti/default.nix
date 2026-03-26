@@ -63,7 +63,7 @@ let
       hi("Tag", { fg = "${config.theme.foregroundBlue}", attr = "bold"  })
       hi("Title", { fg = "${config.theme.foreground}", attr = "bold" })
       hi("Todo", { fg = "${config.theme.foregroundRed}", bg = "${config.theme.background}", attr = "bold" })
-      hi("Type", { fg = "${config.theme.foreground}" })
+      hi("Type", { fg = "${config.theme.foreground}", attr = "bold" })
 
       hi("WhichKeyValue", "Constant")
       hi("helpOption", "Constant")
