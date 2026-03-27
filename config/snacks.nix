@@ -5,7 +5,7 @@
 
     # { mode = [ "n" "v" ]; key = "<localleader>ff"; action = "<cmd>lua Snacks.picker.files()<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>ff"; action = "<cmd>lua Snacks.picker.smart({title='Files'})<cr>"; }
-    { mode = [ "n" "v" ]; key = "<localleader>fg"; action = "<cmd>lua Snacks.picker.grep()<cr>"; }
+    { mode = [ "n" "v" ]; key = "<localleader>fg"; action = "<cmd>lua Snacks.picker.grep({hidden=true})<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>fb"; action = "<cmd>lua Snacks.picker.recent()<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>fn"; action = "<cmd>lua Snacks.picker.noice()<cr>"; }
 
@@ -17,12 +17,25 @@
     settings = {
       picker = {
         enabled = true;
-        matcher = {
-          frecency = true;
-          cwd_bonus = true;
-          history_bonus = true;
 
-          sort_empty = true;
+        # sources = {
+        #   grep = {
+        #     hidden = true;
+        #     ignored = false;
+        #     exclude = [ "node_modules" ".git" ".DS_Store" ];
+        #   };
+        #   files = {
+        #     hidden = true;
+        #     ignored = false;
+        #     exclude = [ "node_modules" ".git" ];
+        #   };
+        # };
+
+        matcher = {
+          # frecency = true;
+          # cwd_bonus = true;
+          # history_bonus = true;
+          # sort_empty = true;
         };
       };
 
@@ -32,8 +45,8 @@
     };
   };
 
+  # TODO; required?
   extraPackages = with pkgs; [ ripgrep ];
-
 
   extraConfigLua = ''
     local function grep_in_selected_dir()
@@ -43,13 +56,13 @@
           preset = "select", 
         },
         cmd = "fd",
-        args = { "--type", "d", "--exclude", ".git" },
+        args = { "--type", "d", "--exclude", ".git", "--hidden" },
         title = "Grep in dir",
         actions = {
           confirm = function(picker, item)
             picker:close()
             vim.schedule(function()
-              Snacks.picker.grep({ cwd = item.file, title = "Grep in " .. item.file })
+              Snacks.picker.grep({ cwd = item.file, title = "Grep in " .. item.file, hidden = true })
             end)
           end,
         },
