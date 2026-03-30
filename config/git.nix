@@ -2,6 +2,7 @@
 
 {
   extraPackages = with pkgs; [ git-absorb ];
+  extraPlugins = [pkgs.vimPlugins.vim-flog];
 
   keymaps = [
     # neogit
@@ -10,6 +11,10 @@
 
     # fugitive
     { mode = [ "n" "v" ]; key = "<localleader>gs"; action = "<cmd>vert rightbelow G<cr>"; }
+    # { mode = [ "n" "v" ]; key = "<localleader>gl"; action = "<cmd>vert rightbelow G log --oneline --graph --all --decorate<cr>"; }
+
+    # vim-flog
+    { mode = [ "n" "v" ]; key = "<localleader>gl"; action = "<cmd>vert rightbelow Flogsplit -auto-update<cr>"; }
 
     # git-conflict
     { mode = [ "n" ]; key = "]x"; action = "<Plug>(git-conflict-next-conflict)"; }
@@ -27,7 +32,7 @@
     # diffview
     { mode = [ "n" "v" ]; key = "<localleader>gd"; action = ":DiffviewOpen "; }
     { mode = [ "n" "v" ]; key = "<localleader>gS"; action = "<cmd>DiffviewOpen HEAD<cr>"; }
-    { mode = [ "n" "v" ]; key = "<localleader>gl"; action = "<cmd>DiffviewFileHistory<cr>"; }
+    { mode = [ "n" "v" ]; key = "<localleader>gL"; action = "<cmd>DiffviewFileHistory<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>gf"; action = "<cmd>DiffviewFileHistory %<cr>"; }
   ];
 
