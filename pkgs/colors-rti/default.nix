@@ -330,6 +330,9 @@ let
       hi("@org.keyword.todo", { fg = "${config.theme.foregroundRed}" })
       hi("@org.keyword.done", { fg = "${config.theme.foregroundGreen}" })
 
+      hi("SnacksPickerListCursorLine", "CursorLine")
+      hi("SnacksPickerPathHidden", { fg = "${config.theme.foreground2}" })
+
       hi("NeogitNormal", "Normal")
       hi("NeogitFloat", "NormalFloat")
       hi("NeogitFloatBorder", "FloatBorder")
