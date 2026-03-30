@@ -1,7 +1,7 @@
 { pkgs, ... }: {
 
   keymaps = [
-    { mode = [ "n" "v" ]; key = "<localleader>n"; action = "<cmd>lua Snacks.picker.explorer()<cr><c-w>p<c-w>="; }
+    { mode = [ "n" "v" ]; key = "<localleader>n"; action = "<cmd>lua Snacks.picker.explorer({hidden=true})<cr><c-w>p<c-w>="; }
 
     # { mode = [ "n" "v" ]; key = "<localleader>ff"; action = "<cmd>lua Snacks.picker.files()<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>ff"; action = "<cmd>lua Snacks.picker.smart({title='Files'})<cr>"; }
