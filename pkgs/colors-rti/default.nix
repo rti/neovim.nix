@@ -146,9 +146,9 @@ let
       hi("Changed", "DiffChange")
       hi("Removed", "DiffDelete")
 
-      hi("GitSignsAddInline", { fg = "${config.theme.foreground}", bg = "${config.theme.brightGreen}" })
-      hi("GitSignsChangeInline", { fg = "${config.theme.foreground}", bg = "${config.theme.brightYellow}" })
-      hi("GitSignsDeleteInline", { fg = "${config.theme.foreground}", bg = "${config.theme.brightRed}" })
+      hi("GitSignsAddInline", { fg = "${config.theme.foreground}", bg = "${config.theme.lightGreen}" })
+      hi("GitSignsChangeInline", { fg = "${config.theme.foreground}", bg = "${config.theme.lightYellow}" })
+      hi("GitSignsDeleteInline", { fg = "${config.theme.foreground}", bg = "${config.theme.lightRed}" })
       hi("GitSignsAdd", { fg = "${config.theme.lightGreen}" })
       hi("GitSignsChange", { fg = "${config.theme.lightYellow}" })
       hi("GitSignsDelete", { fg = "${config.theme.lightRed}" })
@@ -331,7 +331,8 @@ let
       hi("@org.keyword.done", { fg = "${config.theme.foregroundGreen}" })
 
       hi("SnacksPickerListCursorLine", "CursorLine")
-      hi("SnacksPickerPathHidden", { fg = "${config.theme.foreground2}" })
+      hi("SnacksPickerPathHidden", { fg = "${config.theme.foreground3}" })
+      hi("SnacksPickerDir", { fg = "${config.theme.foreground3}" })
 
       hi("NeogitNormal", "Normal")
       hi("NeogitFloat", "NormalFloat")
