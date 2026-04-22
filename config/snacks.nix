@@ -3,13 +3,10 @@
   keymaps = [
     { mode = [ "n" "v" ]; key = "<localleader>n"; action = "<cmd>lua Snacks.picker.explorer({hidden=true})<cr><c-w>p<c-w>="; }
 
-    # { mode = [ "n" "v" ]; key = "<localleader>ff"; action = "<cmd>lua Snacks.picker.files()<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>ff"; action = "<cmd>lua Snacks.picker.smart({title='Files'})<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>fg"; action = "<cmd>lua Snacks.picker.grep({hidden=true})<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>fb"; action = "<cmd>lua Snacks.picker.recent()<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>fn"; action = "<cmd>lua Snacks.picker.noice()<cr>"; }
-
-    # { mode = [ "n" "v" ]; key = "<localleader>b"; action = "<cmd>lua Snacks.picker.buffers()<cr>"; }
   ];
 
   plugins.snacks = {
@@ -17,26 +14,6 @@
     settings = {
       picker = {
         enabled = true;
-
-        # sources = {
-        #   grep = {
-        #     hidden = true;
-        #     ignored = false;
-        #     exclude = [ "node_modules" ".git" ".DS_Store" ];
-        #   };
-        #   files = {
-        #     hidden = true;
-        #     ignored = false;
-        #     exclude = [ "node_modules" ".git" ];
-        #   };
-        # };
-
-        matcher = {
-          # frecency = true;
-          # cwd_bonus = true;
-          # history_bonus = true;
-          # sort_empty = true;
-        };
       };
 
       input = {
@@ -45,7 +22,6 @@
     };
   };
 
-  # TODO; required?
   extraPackages = with pkgs; [ ripgrep ];
 
   extraConfigLua = ''
