@@ -5,10 +5,6 @@
   extraPlugins = [pkgs.vimPlugins.vim-flog];
 
   keymaps = [
-    # neogit
-    # { mode = [ "n" "v" ]; key = "<localleader>gs"; action = "<cmd>Neogit<cr>"; }
-    # { mode = [ "n" "v" ]; key = "<localleader>gl"; action = ":lua require('neogit').action('log', 'log_head', {'--graph', '--decorate'})()<cr>"; }
-
     # fugitive
     { mode = [ "n" "v" ]; key = "<localleader>gs"; action = "<cmd>vert rightbelow G<cr>"; }
     # { mode = [ "n" "v" ]; key = "<localleader>gl"; action = "<cmd>vert rightbelow G log --oneline --graph --all --decorate<cr>"; }
@@ -37,61 +33,6 @@
   ];
 
   plugins = {
-    # https://github.com/NeogitOrg/neogit
-    # neogit = {
-    #   enable = true;
-    #   settings = {
-    #     disable_builtin_notifications = true;
-    #     disable_commit_confirmation = true;
-    #     disable_context_highlighting = true;
-    #     disable_insert_on_commit = true;
-    #
-    #     graph_style = "kitty";
-    #
-    #     kind = "vsplit";
-    #
-    #     integrations = {
-    #       diffview = true;
-    #     };
-    #
-    #     signs = {
-    #       # { CLOSED, OPENED }
-    #       hunk = [ "" "" ];
-    #       item = [ "" "" ];
-    #       section = [ "" "" ];
-    #     };
-    #
-    #     mappings = {
-    #       popup = {
-    #         "g?" = "HelpPopup";
-    #         "?" = false;
-    #         "q" = false;
-    #       };
-    #       # finder = { "<esc>" = false; };
-    #       # commit_view = { "<esc>" = false; };
-    #
-    #       commit_view = {
-    #         "gf" = "OpenFileInWorktree";
-    #         # "q" = false; # no effect. why?
-    #       };
-    #       commit_editor = {
-    #         # "q" = false; # no effect. why?
-    #       };
-    #     };
-    #
-    #     commit_editor = {
-    #       kind = "vsplit";
-    #       show_staged_diff = true;
-    #       staged_diff_split_kind = "split";
-    #     };
-    #     commit_popup.kind = "split";
-    #     commit_select.kind = "split";
-    #     popup.kind = "split";
-    #     preview_buffer.kind = "split";
-    #     log_view.kind = "split";
-    #   };
-    # };
-
     fugitive = {
       enable = true;
     };
