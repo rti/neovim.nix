@@ -7,7 +7,6 @@
   keymaps = [
     # fugitive
     { mode = [ "n" "v" ]; key = "<localleader>gs"; action = "<cmd>vert rightbelow G<cr>"; }
-    # { mode = [ "n" "v" ]; key = "<localleader>gl"; action = "<cmd>vert rightbelow G log --oneline --graph --all --decorate<cr>"; }
 
     # vim-flog
     { mode = [ "n" "v" ]; key = "<localleader>gl"; action = "<cmd>vert rightbelow Flogsplit -auto-update<cr>"; }
