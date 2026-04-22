@@ -26,6 +26,7 @@
 
     # diffview
     { mode = [ "n" "v" ]; key = "<localleader>gd"; action = ":DiffviewOpen "; }
+    { mode = [ "n" "v" ]; key = "<localleader>gD"; action = "<cmd>DiffviewOpen origin/HEAD...<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>gS"; action = "<cmd>DiffviewOpen HEAD<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>gL"; action = "<cmd>DiffviewFileHistory<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>gf"; action = "<cmd>DiffviewFileHistory %<cr>"; }
