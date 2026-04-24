@@ -3,7 +3,7 @@
   keymaps = [
     { mode = [ "n" "v" ]; key = "<localleader>n"; action = "<cmd>lua Snacks.picker.explorer({hidden=true})<cr><c-w>p<c-w>="; }
 
-    { mode = [ "n" "v" ]; key = "<localleader>ff"; action = "<cmd>lua Snacks.picker.smart({title='Files'})<cr>"; }
+    { mode = [ "n" "v" ]; key = "<localleader>ff"; action = "<cmd>lua Snacks.picker.smart({title='Files',hidden=true})<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>fg"; action = "<cmd>lua Snacks.picker.grep({hidden=true})<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>fb"; action = "<cmd>lua Snacks.picker.recent()<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>fn"; action = "<cmd>lua Snacks.picker.noice()<cr>"; }
