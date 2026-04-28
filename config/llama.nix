@@ -12,6 +12,10 @@
         let g:llama_config={}
       endif
 
+      " free the CTRL-G keymap in insert mode
+      "iunmap <C-G>s
+      "iunmap <C-G>S
+
       let g:llama_config.show_info = v:false
       let g:llama_config.keymap_fim_accept_word = "<C-F>"
       let g:llama_config.keymap_fim_accept_line = "<C-G>"
