@@ -12,13 +12,9 @@
   plugins.snacks = {
     enable = true;
     settings = {
-      picker = {
-        enabled = true;
-      };
-
-      input = {
-        enabled = true;
-      };
+      picker.enabled = true;
+      input.enabled = true;
+      notifier.enabled = true;
     };
   };
 
