@@ -12,10 +12,6 @@
         let g:llama_config={}
       endif
 
-      " free the CTRL-G keymap in insert mode
-      "iunmap <C-G>s
-      "iunmap <C-G>S
-
       let g:llama_config.show_info = v:false
       let g:llama_config.keymap_fim_accept_word = "<C-F>"
       let g:llama_config.keymap_fim_accept_line = "<C-G>"
@@ -26,9 +22,13 @@
       let g:llama_config.keymap_fim_trigger = ""
     ]])
 
-    -- free the CTRL-G keymap in insert mode
-    vim.api.nvim_del_keymap("i", "<C-G>s")
-    vim.api.nvim_del_keymap("i", "<C-G>S")
+    -- free the CTRL-G keymap in insert mode, but only after the plugin actually set it
+    function fixup_mappings()
+      vim.api.nvim_del_keymap("i", "<C-G>s")
+      vim.api.nvim_del_keymap("i", "<C-G>S")
+    end
+
+    vim.defer_fn(function() fixup_mappings() end, 100)
   '';
 
   extraPackages = with pkgs; [ curl ];
