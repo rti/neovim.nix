@@ -40,13 +40,6 @@
           installCargo = false; # take from project
         };
 
-        basedpyright = {
-          enable = true;
-          settings = {
-            basedpyright.analysis.typeCheckingMode = "standard";
-          };
-        };
-
         bashls.enable = true;
         cssls.enable = true;
         dockerls.enable = true;
@@ -56,6 +49,7 @@
         tailwindcss.enable = true;
         tofu_ls.enable = true;
         ts_ls.enable = true;
+        ty.enable = true;
         vimls.enable = true;
         yamlls.enable = true;
       };
