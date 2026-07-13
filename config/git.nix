@@ -11,10 +11,6 @@
     # vim-flog
     { mode = [ "n" "v" ]; key = "<localleader>gl"; action = "<cmd>rightbelow Flogsplit -auto-update -date=short<cr>"; }
 
-    # git-conflict
-    { mode = [ "n" ]; key = "]x"; action = "<Plug>(git-conflict-next-conflict)"; }
-    { mode = [ "n" ]; key = "[x"; action = "<Plug>(git-conflict-prev-conflict)"; }
-
     # gitsigns
     { mode = [ "n" ]; key = "]c"; action = "<cmd>Gitsigns next_hunk<cr>"; }
     { mode = [ "n" ]; key = "[c"; action = "<cmd>Gitsigns prev_hunk<cr>"; }
@@ -39,12 +35,6 @@
 
     gitlinker = {
       enable = true;
-    };
-
-    # https://github.com/akinsho/git-conflict.nvim
-    git-conflict = {
-      enable = true;
-      settings.default_mappings = false;
     };
 
     # https://github.com/lewis6991/gitsigns.nvim
