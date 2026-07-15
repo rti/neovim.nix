@@ -7,6 +7,7 @@
 
   plugins.noice = {
     enable = true;
+
     settings = {
       presets = {
         bottom_search = false; # use a classic bottom cmdline for search
@@ -16,20 +17,39 @@
         lsp_doc_border = true; # add a border to hover docs and signature help
       };
 
+      notify = {
+        enabled = true;
+        view = "mini";
+      };
+
+      messages = {
+        view = "mini";
+        view_error = "mini";
+        view_warn = "mini";
+      };
+
       views = {
         cmdline_popup = {
           position = { row = "12%"; col = "50%"; };
         };
         mini = {
-          win_options = { winblend = 0; };
-        };
-        lsp = {
-          hover.silent = true; # does not work!?
-          override = {
-            "cmp.entry.get_documentation" = false;
-            "vim.lsp.util.convert_input_to_markdown_lines" = true;
-            "vim.lsp.util.stylize_markdown" = true;
+          timeout = 8000; # milliseconds
+          # size = { width = "60%"; };
+          win_options = {
+            wrap = true;
+            linebreak = true;
+            breakindent = true;
+            winblend = 0;
           };
+        };
+      };
+
+      lsp = {
+        hover.silent = true; # does not work!?
+        override = {
+          "cmp.entry.get_documentation" = false;
+          "vim.lsp.util.convert_input_to_markdown_lines" = true;
+          "vim.lsp.util.stylize_markdown" = true;
         };
       };
 
