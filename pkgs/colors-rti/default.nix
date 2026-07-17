@@ -250,6 +250,8 @@ let
       hi("NoiceFormatLevelTrace", "Normal")
       hi("NoiceLspProgressTitle", "Normal")
 
+      hi("NoiceMini", { bg = "${config.theme.background2}" })
+
       hi("RenderMarkdownH1", { fg = "${config.theme.foreground}", bg = "${config.theme.backgroundBlue}", attr = "bold" })
       hi("RenderMarkdownH2", { fg = "${config.theme.foreground}", bg = "${config.theme.backgroundBlue}", attr = "bold" })
       hi("RenderMarkdownH3", { fg = "${config.theme.foreground}", bg = "${config.theme.backgroundBlue}", attr = "bold" })
@@ -535,7 +537,4 @@ pkgs.stdenvNoCC.mkDerivation {
     cp -rv ${lualineTheme}/* $out/
   '';
 }
-
-
-
 
