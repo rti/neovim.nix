@@ -17,6 +17,7 @@
     ./noice.nix
     ./llama.nix
     ./lua.nix
+    ./python.nix
     ./camelcasemotion.nix
     ./git.nix
     ./vim-slime.nix
