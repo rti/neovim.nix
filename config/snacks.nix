@@ -6,6 +6,7 @@
     { mode = [ "n" "v" ]; key = "<localleader>ff"; action = "<cmd>lua Snacks.picker.smart({title='Files',hidden=true})<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>fg"; action = "<cmd>lua Snacks.picker.grep({hidden=true})<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>fb"; action = "<cmd>lua Snacks.picker.recent()<cr>"; }
+    { mode = [ "n" "v" ]; key = "<localleader>fB"; action = "<cmd>lua Snacks.picker.buffers()<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>fn"; action = "<cmd>lua Snacks.picker.noice()<cr>"; }
   ];
 
