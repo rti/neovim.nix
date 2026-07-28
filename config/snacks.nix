@@ -1,7 +1,11 @@
 { pkgs, ... }: {
 
   keymaps = [
-    { mode = [ "n" "v" ]; key = "<localleader>n"; action = "<cmd>lua Snacks.picker.explorer({hidden=true})<cr><c-w>p<c-w>="; }
+    {
+      mode = [ "n" "v" ];
+      key = "<localleader>n";
+      action = "<cmd>lua Snacks.picker.explorer({hidden=true, git_status=false, diagnostics=false})<cr><c-w>p<c-w>=";
+    }
 
     { mode = [ "n" "v" ]; key = "<localleader>ff"; action = "<cmd>lua Snacks.picker.smart({title='Files',hidden=true})<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>fg"; action = "<cmd>lua Snacks.picker.grep({hidden=true})<cr>"; }
@@ -18,8 +22,6 @@
       notifier.enabled = true;
     };
   };
-
-  extraPackages = with pkgs; [ ripgrep ];
 
   extraConfigLua = ''
     local function grep_in_selected_dir()
@@ -48,4 +50,6 @@
 
     vim.keymap.set("n", "<leader>fG", grep_in_selected_dir, { desc = "Grep in selected directory" })   
   '';
+
+  extraPackages = with pkgs; [ ripgrep fd ];
 }
