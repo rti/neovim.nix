@@ -14,8 +14,17 @@
         # border = true;
         border = false;
         width = "block";
-        left_pad = 2;
+        left_pad = 0;
         right_pad = 4;
+        position = "overlay";
+        icons = [
+          "# "
+          "## "
+          "### "
+          "#### "
+          "##### "
+          "###### "
+        ];
       };
       bullet = {
         icons = [ "• " "• " ];
