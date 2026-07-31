@@ -2,7 +2,7 @@
 {
   keymaps = [
     { mode = [ "n" "v" ]; key = "<localleader>cl"; action = "<cmd>CodeCompanionChat adapter=llamacpp<cr>"; }
-    { mode = [ "n" "v" ]; key = "<localleader>cg"; action = "<cmd>CodeCompanionChat adapter=gemini_cli<cr>"; }
+    # { mode = [ "n" "v" ]; key = "<localleader>cg"; action = "<cmd>CodeCompanionChat adapter=gemini_cli<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>ct"; action = "<cmd>CodeCompanionChat Toggle<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>ca"; action = "<cmd>CodeCompanionActions<cr>"; }
     { mode = [ "n" "v" ]; key = "<localleader>ci"; action = "<cmd>CodeCompanion<cr>"; }
@@ -44,17 +44,17 @@
 
       adapters = {
         acp = {
-          gemini_cli = {
-            __raw = /*lua*/ ''
-              function()
-                return require("codecompanion.adapters").extend("gemini_cli", {
-                  defaults = {
-                    auth_method = "vertex-ai",
-                  },
-                })
-              end
-            '';
-          };
+          # gemini_cli = {
+          #   __raw = /*lua*/ ''
+          #     function()
+          #       return require("codecompanion.adapters").extend("gemini_cli", {
+          #         defaults = {
+          #           auth_method = "vertex-ai",
+          #         },
+          #       })
+          #     end
+          #   '';
+          # };
 
           opts.show_presets = false;
         };
@@ -67,7 +67,7 @@
                   name = "llamacpp",
                   formatted_name = "llama.cpp",
                   env = {
-                    url = "http://localhost:8012"; -- e.g. llama-server --gpt-oss-20b-default
+                    url = "http://localhost:8011";
                     chat_url = "/v1/chat/completions";
                   };
                 })
@@ -81,7 +81,7 @@
       };
 
       display.chat = {
-        intro_message = "Welcome to CodeCompanion";
+        intro_message = "";
         show_settings = true;
         start_in_insert_mode = false;
 
