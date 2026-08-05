@@ -55,4 +55,35 @@
     # https://github.com/pwntester/octo.nvim
     octo.enable = true;
   };
+
+  # TODO: edit clears the fugitive git status buffer when used with BufWritePost
+  # TODO: G resets the cursor position
+  # TODO: pushed commits are not updated when pushing from the commandline outside vim
+  extraConfigLua = ''
+    -- update fugitive status buffer on .git/index change
+    local watcher = vim.uv.new_fs_event()
+    watcher:start(".git", {}, vim.schedule_wrap(function()
+      for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+        if vim.bo[buf].filetype == "fugitive" then
+          vim.api.nvim_buf_call(buf, function()
+            vim.cmd("silent! edit")
+          end)
+        end
+      end
+    end))
+
+    -- update fugitive status buffer on file write
+    vim.api.nvim_create_autocmd("BufWritePost", {
+      callback = function()
+        for _, win in ipairs(vim.api.nvim_list_wins()) do
+          local buf = vim.api.nvim_win_get_buf(win)
+          if vim.bo[buf].filetype == "fugitive" then
+            vim.api.nvim_buf_call(buf, function()
+              vim.cmd("silent! G")
+            end)
+          end
+        end
+      end,
+    })
+  '';
 }
