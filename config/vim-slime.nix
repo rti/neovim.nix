@@ -14,6 +14,7 @@
     settings = {
       target = "kitty";
       no_mappings = 1;
+      bracketed_paste = 1;
     };
   };
 }
