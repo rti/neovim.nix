@@ -13,7 +13,8 @@
         sign = false;
         # border = true;
         border = false;
-        width = "block";
+        # width = "block";
+        width = "full";
         left_pad = 0;
         right_pad = 4;
         position = "overlay";
