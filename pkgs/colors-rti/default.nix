@@ -47,7 +47,7 @@ let
       hi("TabLineFill", "Normal")
 
       hi("Boolean", { fg = "${config.theme.foreground}" })
-      hi("Comment", { fg = "${config.theme.foreground4}", attr = "italic" })
+      hi("Comment", { fg = "${config.theme.foreground3}", attr = "italic" })
       hi("Constant", { fg = "${config.theme.foreground}" })
       hi("Conditional", { fg = "${config.theme.foreground}" })
       hi("Directory", { fg = "${config.theme.foreground}",attr = "bold" })
