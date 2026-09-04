@@ -18,6 +18,12 @@
     enable = true;
     settings = {
       picker.enabled = true;
+      picker.win.input.keys = {
+        "<PageUp>" = { __raw = ''{ "list_scroll_up", mode = { "i", "n" } }''; };
+        "<PageDown>" = { __raw = ''{ "list_scroll_down", mode = { "i", "n" } }''; };
+        "<S-PageUp>" = { __raw = ''{ "preview_scroll_up", mode = { "i", "n" } }''; };
+        "<S-PageDown>" = { __raw = ''{ "preview_scroll_down", mode = { "i", "n" } }''; };
+      };
       input.enabled = true;
       notifier.enabled = true;
     };
