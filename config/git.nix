@@ -9,7 +9,7 @@
     { mode = [ "n" "v" ]; key = "<localleader>gs"; action = "<cmd>vert rightbelow G<cr>"; }
 
     # vim-flog
-    { mode = [ "n" "v" ]; key = "<localleader>gl"; action = "<cmd>rightbelow Flogsplit -auto-update -date=short<cr>"; }
+    { mode = [ "n" "v" ]; key = "<localleader>gl"; action = "<cmd>rightbelow Flogsplit -auto-update -date=short<cr><C-w>J"; }
 
     # gitsigns
     { mode = [ "n" ]; key = "]c"; action = "<cmd>Gitsigns next_hunk<cr>"; }
