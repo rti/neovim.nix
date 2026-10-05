@@ -8,6 +8,10 @@
     { mode = [ "n" ]; key = "<localleader>sp"; action = "<plug>SlimeParagraphSend"; }
     { mode = [ "n" ]; key = "<localleader>sc"; action = "<plug>SlimeSendCell"; } # %%
     { mode = [ "n" ]; key = "<localleader>sm"; action = "<plug>SlimeMotionSend"; }
+
+    # jump between cells
+    { mode = [ "n" "v" "o" ]; key = "]s"; action = "<cmd>call search('^# %%', 'W')<cr>"; options.silent = true; }
+    { mode = [ "n" "v" "o" ]; key = "[s"; action = "<cmd>call search('^# %%', 'bW')<cr>"; options.silent = true; }
   ];
 
   plugins.vim-slime = {
