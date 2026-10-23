@@ -23,7 +23,7 @@ let
       vim.opt.termguicolors = true
       vim.g.colors_name = 'rti'
 
-      hi("Normal", { fg = "${config.theme.foreground}" })
+      hi("Normal", { fg = "${config.theme.foreground}", bg = "${config.theme.background}" })
       hi("NormalNC", "Normal")
       hi("NormalFloat", "Normal")
       -- hi("NormalFloat", { bg="${config.theme.background2}" })
