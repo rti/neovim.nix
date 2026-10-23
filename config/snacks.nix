@@ -29,10 +29,10 @@
         "<S-PageDown>" = { __raw = ''{ "preview_scroll_down", mode = { "i", "n" } }''; };
       };
       input.enabled = true;
-      # input.win.backdrop = {
-      #   bg = "#ffffff";
-      #   blend = 30;
-      # };
+      input.win.backdrop = {
+        bg = "#ffffff";
+        blend = 30;
+      };
       notifier.enabled = true;
     };
   };

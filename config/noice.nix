@@ -29,7 +29,10 @@
       };
 
       views = {
+        popup.backend = "popup_backdrop";
+        confirm.backend = "popup_backdrop";
         cmdline_popup = {
+          backend = "popup_backdrop";
           position = { row = "12%"; col = "50%"; };
         };
         mini = {
@@ -65,4 +68,47 @@
       ];
     };
   };
+
+  extraConfigLua = ''
+    -- Noice's NUI popup backend has no backdrop option.
+    package.preload["noice.view.backend.popup_backdrop"] = function()
+      local Popup = require("noice.view.nui"):extend("PopupBackdrop")
+
+      function Popup:init(opts)
+        opts.type = "popup"
+        Popup.super.init(self, opts)
+      end
+
+      function Popup:mount()
+        Popup.super.mount(self)
+        local parent = self._nui.winid
+        local config = vim.api.nvim_win_get_config(parent)
+        vim.api.nvim_set_hl(0, "NoiceBackdrop", { bg = "#ffffff" })
+        local backdrop = Snacks.win({
+          relative = "editor",
+          width = 0,
+          height = 0,
+          row = 0,
+          col = 0,
+          border = "none",
+          backdrop = false,
+          focusable = false,
+          zindex = config.zindex - 1,
+          wo = {
+            winhighlight = "Normal:NoiceBackdrop",
+            winblend = 30,
+          },
+        })
+        vim.api.nvim_create_autocmd("WinClosed", {
+          pattern = tostring(parent),
+          once = true,
+          callback = function()
+            backdrop:close()
+          end,
+        })
+      end
+
+      return Popup
+    end
+  '';
 }
