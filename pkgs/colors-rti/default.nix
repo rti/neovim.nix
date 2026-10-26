@@ -481,17 +481,17 @@ let
   lualineTheme = pkgs.writeTextDir "lua/lualine/themes/rti.lua" /* lua */ ''
     return {
       normal = {
-        a = { bg = "${config.theme.primary}", fg = "${config.theme.background}", gui = 'none', attr = "bold" },
+        a = { bg = "${config.theme.backgroundPrimary}", fg = "${config.theme.background}", gui = 'none', attr = "bold" },
         b = { bg = "${config.theme.background4}", fg = "${config.theme.foreground}", gui = 'none' },
         c = { bg = "${config.theme.background4}", fg = "${config.theme.foreground}", gui = 'none' },
       },
       insert = {
-        a = { bg = "${config.theme.foregroundMagenta}", fg = "${config.theme.background}", gui = 'none', attr = "bold" },
+        a = { bg = "${config.theme.backgroundSecondary}", fg = "${config.theme.background}", gui = 'none', attr = "bold" },
         b = { bg = "${config.theme.background4}", fg = "${config.theme.foreground}", gui = 'none' },
         c = { bg = "${config.theme.background4}", fg = "${config.theme.foreground}", gui = 'none' },
       },
       replace = {
-        a = { bg = "${config.theme.foregroundRed}", fg = "${config.theme.background}", gui = 'none', attr = "bold" },
+        a = { bg = "${config.theme.backgroundUrgent}", fg = "${config.theme.background}", gui = 'none', attr = "bold" },
         b = { bg = "${config.theme.background4}", fg = "${config.theme.foreground}", gui = 'none' },
         c = { bg = "${config.theme.background4}", fg = "${config.theme.foreground}", gui = 'none' },
       },
